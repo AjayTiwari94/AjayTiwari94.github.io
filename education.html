@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education - Ajay Tiwari - AI/ML Graduate & Data Analyst</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #f59e0b;
+            --primary-dark: #d97706;
+            --secondary: #fbbf24;
+            --accent: #fde68a;
+            --bg-dark: #0f172a;
+            --bg-card: rgba(30, 41, 59, 0.8);
+            --text-primary: #f8fafc;
+            --text-secondary: #cbd5e1;
+            --text-muted: #64748b;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+                .gradient-bg {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 30%, #334155 60%, #475569 100%);
+            background-size: 400% 400%; 
+            animation: gradientShift 15s ease infinite;
+            position: relative;
+        }
+        
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            25% { background-position: 100% 25%; }
+            50% { background-position: 100% 100%; }
+            75% { background-position: 0% 100%; }
+        }
+        
+        .glass-card { 
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(251, 191, 36, 0.1);
+            border-radius: 16px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); 
+        }
+        
+        .glass-card:hover { 
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(251, 191, 36, 0.15);
+            border-color: rgba(251, 191, 36, 0.3);
+        }
+        
+        .gradient-text { 
+            background: linear-gradient(135deg, #f59e0b, #fbbf24, #fde68a);
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent; 
+            background-clip: text;
+        }
+        
+        .name-animate { 
+            background: linear-gradient(90deg, #f59e0b, #fbbf24, #fde68a, #f59e0b);
+            background-size: 300% 100%;
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent; 
+            animation: nameFlow 4s ease infinite;
+        }
+        
+        @keyframes nameFlow {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; } 
+        }
+        
+        .hero-title {
+            font-weight: 900;
+            letter-spacing: -0.02em;
+        }
+        
+        .section-title {
+            font-weight: 700;
+            letter-spacing: -0.01em;
+        }
+        
+        .nav-link {
+            position: relative;
+            transition: all 0.3s ease;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-weight: 500;
+        }
+        
+        .nav-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(251, 191, 36, 0.1), rgba(251, 191, 36, 0.05));
+            border-radius: 8px;
+            opacity: 0;
+            transition: all 0.3s ease;
+            transform: scale(0.8);
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(135deg, #f59e0b, #fbbf24);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+        
+        .nav-link:hover::before {
+            opacity: 1;
+            transform: scale(1);
+        }
+        
+        .nav-link:hover::after,
+        .nav-active::after {
+            width: 80%;
+        }
+        
+        .nav-link:hover {
+            color: #fbbf24;
+            transform: translateY(-1px);
+        }
+        
+        .nav-active {
+            color: #fbbf24;
+            font-weight: 600;
+        }
+        
+        .nav-active::before {
+            opacity: 1;
+            transform: scale(1);
+        }
+        
+        .nav-active {
+            color: #fbbf24;
+            font-weight: 600;
+        }
+        
+        .nav-active::before {
+            opacity: 1;
+            transform: scale(1);
+        }
+        
+        .fade-in-up {
+            animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        @keyframes fadeInUp { 
+            0% {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .floating-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .hover-scale { 
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); 
+        }
+        
+        .hover-scale:hover { 
+            transform: scale(1.02);
+        }
+        
+        .education-card { 
+            background: rgba(30, 41, 59, 0.6);
+            border: 1px solid rgba(251, 191, 36, 0.1);
+            border-radius: 16px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .education-card:hover { 
+            background: rgba(30, 41, 59, 0.8);
+            border-color: rgba(251, 191, 36, 0.3);
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(251, 191, 36, 0.15);
+        }
+        
+        .timeline-item { 
+            position: relative; 
+            padding-left: 2rem; 
+        }
+        
+        .timeline-item::before { 
+            content: ''; 
+            position: absolute; 
+            left: 0; 
+            top: 0; 
+            width: 12px; 
+            height: 12px; 
+            background: #fbbf24;
+            border-radius: 50%; 
+            transform: translateX(-6px); 
+        }
+        
+        .timeline-line { 
+            position: absolute; 
+            left: 0; 
+            top: 12px; 
+            width: 2px; 
+            height: calc(100% - 12px); 
+            background: linear-gradient(to bottom, #fbbf24, transparent);
+        }
+        
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: rgba(251, 191, 36, 0.1);
+            border-radius: 4px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #f59e0b, #fbbf24);
+            border-radius: 4px;
+            transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+
+        
+        .achievement-badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.5rem 1rem;
+            background: linear-gradient(135deg, rgba(251, 191, 36, 0.2), rgba(245, 158, 11, 0.2));
+            border: 1px solid rgba(251, 191, 36, 0.3);
+            border-radius: 2rem;
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: #fbbf24;
+            margin: 0.25rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .achievement-badge:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(251, 191, 36, 0.3);
+        }
+        
+        .skill-tag {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background: rgba(251, 191, 36, 0.1);
+            border: 1px solid rgba(251, 191, 36, 0.2);
+            border-radius: 1rem;
+            font-size: 0.75rem;
+            color: #fbbf24;
+            margin: 0.125rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .skill-tag:hover {
+            background: rgba(251, 191, 36, 0.2);
+            border-color: rgba(251, 191, 36, 0.4);
+            transform: scale(1.05);
+        }
+        
+        .certification-card {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .certification-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(251, 191, 36, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .certification-card:hover::before {
+            left: 100%;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 1.5rem;
+            background: rgba(30, 41, 59, 0.6);
+            border: 1px solid rgba(251, 191, 36, 0.1);
+            border-radius: 16px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .stat-item:hover {
+            background: rgba(30, 41, 59, 0.8);
+            border-color: rgba(251, 191, 36, 0.3);
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(251, 191, 36, 0.15);
+        }
+        
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #fbbf24;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            font-size: 0.875rem;
+            color: #cbd5e1;
+            font-weight: 500;
+        }
+        
+        .education-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(251, 191, 36, 0.1);
+            border-radius: 16px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .education-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(251, 191, 36, 0.15);
+            border-color: rgba(251, 191, 36, 0.3);
+        }
+        
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        
+        .hover-scale:hover {
+            transform: scale(1.02);
+        }
+    </style>
+</head>
+<body class="gradient-bg min-h-screen">
+    <!-- Header & Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-card border-b border-slate-700/50 backdrop-blur-xl">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="flex items-center space-x-3 group">
+                    <div class="w-10 h-10 bg-gradient-to-br from-amber-500 to-yellow-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                        </svg>
+                    </div>
+                    <span class="text-2xl font-bold name-animate">Ajay Tiwari</span>
+                </a>
+                
+                <nav class="hidden md:flex space-x-2">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="skills.html" class="nav-link">Skills</a>
+                    <a href="experience.html" class="nav-link">Experience</a>
+                    <a href="projects.html" class="nav-link">Projects</a>
+                    <a href="education.html" class="nav-link nav-active">Education</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+                
+                <button id="mobile-menu-button" class="md:hidden text-slate-300 hover:text-white transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+            </button>
+        </div>
+            
+            <div id="mobile-menu" class="hidden md:hidden mobile-menu mt-4 rounded-xl border border-slate-700/50">
+                    <a href="index.html" class="block px-4 py-3 text-slate-300 hover:text-amber-400 hover:bg-gradient-to-r hover:from-amber-500/10 hover:to-yellow-500/10 transition-all duration-300">
+                        <span class="flex items-center">
+                            <svg class="w-4 h-4 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+                            </svg>
+                            Home
+                        </span>
+                    </a>
+                    <a href="skills.html" class="block px-4 py-3 text-slate-300 hover:text-amber-400 hover:bg-gradient-to-r hover:from-amber-500/10 hover:to-yellow-500/10 transition-all duration-300">
+                        <span class="flex items-center">
+                            <svg class="w-4 h-4 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                            Skills
+                        </span>
+                    </a>
+                    <a href="experience.html" class="block px-4 py-3 text-slate-300 hover:text-amber-400 hover:bg-gradient-to-r hover:from-amber-500/10 hover:to-yellow-500/10 transition-all duration-300">
+                        <span class="flex items-center">
+                            <svg class="w-4 h-4 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.605-9-1.65M8.671 15.194l.766-.766a2 2 0 01-1.023-.587l1.805-1.805a2 2 0 012.828 0l1.805 1.805a2 2 0 01-.587 1.023l-.766.766M12 15l3-9 3 9-3 9-3-9z"></path>
+                            </svg>
+                            Experience
+                        </span>
+                    </a>
+                    <a href="projects.html" class="block px-4 py-3 text-slate-300 hover:text-amber-400 hover:bg-gradient-to-r hover:from-amber-500/10 hover:to-yellow-500/10 transition-all duration-300">
+                        <span class="flex items-center">
+                            <svg class="w-4 h-4 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+                            </svg>
+                            Projects
+                        </span>
+                    </a>
+                    <a href="education.html" class="block px-4 py-3 text-slate-300 hover:text-amber-400 hover:bg-gradient-to-r hover:from-amber-500/10 hover:to-yellow-500/10 transition-all duration-300 nav-active">
+                        <span class="flex items-center">
+                            <svg class="w-4 h-4 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path>
+                            </svg>
+                            Education
+                        </span>
+                    </a>
+                    <a href="contact.html" class="block px-4 py-3 text-slate-300 hover:text-amber-400 hover:bg-gradient-to-r hover:from-amber-500/10 hover:to-yellow-500/10 transition-all duration-300">
+                        <span class="flex items-center">
+                            <svg class="w-4 h-4 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                            Contact
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-24 flex-grow">
+        <section id="education-page" class="py-16">
+            <div class="container mx-auto px-6">
+                <h1 class="hero-title text-5xl md:text-6xl mb-6 text-center">
+                    <span class="gradient-text">Education</span> Journey
+                </h1>
+                
+                <!-- Education Introduction -->
+                <div class="text-center mb-12">
+                    <p class="text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed">
+                        My educational journey reflects a strong foundation in computer science with a specialized focus on artificial intelligence and machine learning. 
+                        From early academic excellence to current pursuit of cutting-edge AI technologies, each step has been carefully chosen to build expertise 
+                        in the rapidly evolving field of artificial intelligence.
+                    </p>
+                </div>
+
+                <div class="max-w-4xl mx-auto">
+                    <div class="education-card p-6 mb-8 hover-scale">
+                        <div class="timeline-item">
+                            <div class="timeline-line"></div>
+                            <div class="flex justify-between items-start mb-4">
+                                <h3 class="text-xl font-bold text-slate-100">B.Tech: Computer Science & Engineering (Artificial Intelligence)</h3>
+                                <span class="achievement-badge">🎓 Current</span>
+                            </div>
+                            <p class="text-slate-300 font-semibold mb-2">Noida Institute of Engineering and Technology, Greater Noida</p>
+                            <p class="text-amber-400 text-sm mb-3">2022 – Present</p>
+                            <p class="text-slate-300 mb-4">Currently pursuing B.Tech with specialization in Artificial Intelligence. Maintaining a strong academic record with focus on machine learning, data structures, and algorithms.</p>
+                            
+                            <!-- Progress Bar -->
+                            <div class="mb-4">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-slate-300 text-sm">Course Progress</span>
+                                    <span class="text-amber-400 text-sm font-semibold">75%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 75%"></div>
+                                </div>
+                            </div>
+
+                            <!-- Skills Tags -->
+                            <div class="mb-4">
+                                <span class="skill-tag">Machine Learning</span>
+                                <span class="skill-tag">Data Structures</span>
+                                <span class="skill-tag">Algorithms</span>
+                                <span class="skill-tag">Python</span>
+                                <span class="skill-tag">AI/ML</span>
+                                <span class="skill-tag">Database Systems</span>
+                            </div>
+
+                            <div class="flex items-center space-x-4">
+                                <span class="text-slate-300">Current CGPA: <span class="text-amber-400 font-semibold">8.64</span></span>
+                                <span class="text-slate-300">•</span>
+                                <span class="text-slate-300">Expected Graduation: 2025</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="education-card p-6 mb-8 hover-scale">
+                        <div class="timeline-item">
+                            <div class="timeline-line"></div>
+                            <div class="flex justify-between items-start mb-4">
+                                <h3 class="text-xl font-bold text-slate-100">Higher Secondary Education (Class 12)</h3>
+                                <span class="achievement-badge">🏆 Distinction</span>
+                            </div>
+                            <p class="text-slate-300 font-semibold mb-2">Gyan Prakash Inter College, Dhamola Uttarakhand</p>
+                            <p class="text-amber-400 text-sm mb-3">June 2021</p>
+                            <p class="text-slate-300 mb-4">Completed 12th standard with Science stream, focusing on Physics, Chemistry, and Mathematics. Developed strong analytical and problem-solving skills.</p>
+                            
+                            <!-- Progress Bar -->
+                            <div class="mb-4">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-slate-300 text-sm">Academic Performance</span>
+                                    <span class="text-amber-400 text-sm font-semibold">93.6%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 93.6%"></div>
+                                </div>
+                            </div>
+
+                            <!-- Skills Tags -->
+                            <div class="mb-4">
+                                <span class="skill-tag">Physics</span>
+                                <span class="skill-tag">Chemistry</span>
+                                <span class="skill-tag">Mathematics</span>
+                                <span class="skill-tag">Problem Solving</span>
+                                <span class="skill-tag">Analytical Thinking</span>
+                            </div>
+
+                            <div class="flex items-center space-x-4">
+                                <span class="text-slate-300">Marks: <span class="text-amber-400 font-semibold">93.6%</span></span>
+                                <span class="text-slate-300">•</span>
+                                <span class="text-slate-300">Board: CBSE</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="education-card p-6 mb-8 hover-scale">
+                        <div class="timeline-item">
+                            <div class="timeline-line"></div>
+                            <div class="flex justify-between items-start mb-4">
+                                <h3 class="text-xl font-bold text-slate-100">Senior Secondary Education (Class 10)</h3>
+                                <span class="achievement-badge">⭐ Excellence</span>
+                            </div>
+                            <p class="text-slate-300 font-semibold mb-2">Smt. Govindi Devi Inter College, Bailpokhra Uttarakhand</p>
+                            <p class="text-amber-400 text-sm mb-3">June 2019</p>
+                            <p class="text-slate-300 mb-4">Completed 10th standard with excellent academic performance. Built a strong foundation in core subjects and developed critical thinking abilities.</p>
+                            
+                            <!-- Progress Bar -->
+                            <div class="mb-4">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-slate-300 text-sm">Academic Performance</span>
+                                    <span class="text-amber-400 text-sm font-semibold">90.8%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 90.8%"></div>
+                                </div>
+                            </div>
+
+                            <!-- Skills Tags -->
+                            <div class="mb-4">
+                                <span class="skill-tag">Science</span>
+                                <span class="skill-tag">Mathematics</span>
+                                <span class="skill-tag">English</span>
+                                <span class="skill-tag">Social Studies</span>
+                                <span class="skill-tag">Critical Thinking</span>
+                            </div>
+
+                            <div class="flex items-center space-x-4">
+                                <span class="text-slate-300">Marks: <span class="text-amber-400 font-semibold">90.8%</span></span>
+                                <span class="text-slate-300">•</span>
+                                <span class="text-slate-300">Board: CBSE</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="hero-title text-5xl md:text-6xl mb-6 text-center">
+                    <span class="gradient-text">Professional</span> Certifications
+                </h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="education-card p-6 hover-scale certification-card">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-bold text-slate-100">Data Visualization with Python</h3>
+                            <span class="achievement-badge">📊 IBM</span>
+                        </div>
+                        <p class="text-slate-300 font-semibold mb-2">IBM</p>
+                        <p class="text-slate-300 mb-4">Comprehensive course covering data visualization techniques using Python libraries like Matplotlib and Seaborn.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-amber-400 text-sm">Completed 2023</span>
+                            <div class="flex space-x-2">
+                                <span class="skill-tag">Python</span>
+                                <span class="skill-tag">Matplotlib</span>
+                                <span class="skill-tag">Seaborn</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="education-card p-6 hover-scale certification-card">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-bold text-slate-100">Python for Data Science, AI & Development</h3>
+                            <span class="achievement-badge">🐍 IBM</span>
+                        </div>
+                        <p class="text-slate-300 font-semibold mb-2">IBM</p>
+                        <p class="text-slate-300 mb-4">Advanced Python programming for data analysis, AI applications, and software development.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-amber-400 text-sm">Completed 2023</span>
+                            <div class="flex space-x-2">
+                                <span class="skill-tag">Python</span>
+                                <span class="skill-tag">Data Science</span>
+                                <span class="skill-tag">AI</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="education-card p-6 hover-scale certification-card">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-bold text-slate-100">Tableau Skill Up</h3>
+                            <span class="achievement-badge">📈 Infosys</span>
+                        </div>
+                        <p class="text-slate-300 font-semibold mb-2">Infosys</p>
+                        <p class="text-slate-300 mb-4">Expertise in creating interactive dashboards and data visualizations for business intelligence.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-amber-400 text-sm">Completed 2022</span>
+                            <div class="flex space-x-2">
+                                <span class="skill-tag">Tableau</span>
+                                <span class="skill-tag">Data Visualization</span>
+                                <span class="skill-tag">BI</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="education-card p-6 hover-scale certification-card">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-bold text-slate-100">Mastering PostgreSQL</h3>
+                            <span class="achievement-badge">🗄️ Infosys</span>
+                        </div>
+                        <p class="text-slate-300 font-semibold mb-2">Infosys</p>
+                        <p class="text-slate-300 mb-4">Advanced database management and SQL programming for efficient data handling and analysis.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-amber-400 text-sm">Completed 2022</span>
+                            <div class="flex space-x-2">
+                                <span class="skill-tag">PostgreSQL</span>
+                                <span class="skill-tag">SQL</span>
+                                <span class="skill-tag">Database</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="glass-card border-t border-slate-700/50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="text-center">
+                <h3 class="text-xl font-bold name-animate mb-2">Ajay Tiwari</h3>
+                <p class="text-slate-400 mb-4">AI/ML Engineer & Data Analyst</p>
+                
+                <div class="flex justify-center space-x-6 mb-4">
+                    <a href="https://github.com/AjayTiwari94" target="_blank" class="text-slate-400 hover:text-white transition-colors">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/ajay-tiwari-849725284" target="_blank" class="text-slate-400 hover:text-white transition-colors">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                    </a>
+                    <a href="https://leetcode.com/u/AjayTiwari94/" target="_blank" class="text-slate-400 hover:text-white transition-colors">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M13.483 0a1.374 1.374 0 0 0-1.374 1.374v9.735a1.374 1.374 0 0 0 1.374 1.374h9.147a1.374 1.374 0 0 0 1.374-1.374V1.374A1.374 1.374 0 0 0 22.63 0zM4.414 12.483a1.374 1.374 0 0 0-1.374 1.374v9.147a1.374 1.374 0 0 0 1.374 1.374h9.734a1.374 1.374 0 0 0 1.374-1.374v-3.445l-1.374-1.374v3.445H4.414v-9.147h3.445l1.374-1.374z"/>
+                        </svg>
+                    </a>
+                </div>
+                
+                <p class="text-slate-500 text-xs">© 2024 Ajay Tiwari. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="global.js"></script>
+</body>
+</html> 
