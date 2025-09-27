@@ -70,7 +70,50 @@ const projectDetails = {
         ],
         challenges: "The main technical challenge was establishing a stable and efficient connection between Tableau and a live Python backend via TabPy. This was overcome by carefully configuring the server and optimizing the Pandas scripts to ensure fast data processing and a smooth user experience in the dashboard.",
         link: 'https://github.com/AjayTiwari94/Customer-Transaction-Analysis'
-    }
+    },
+	'multi-ai-agent': {
+		title: 'Multi-AI-Agent Medical Diagnosis',
+		image: 'https://placehold.co/600x400/1c1917/facc15?text=Multi-AI+Medical+System',
+		problem: 'The healthcare industry faces challenges in providing comprehensive medical diagnoses due to the complexity of patient conditions that often require expertise from multiple medical specialties. This project aimed to create a collaborative AI system where specialized medical AI agents work together to provide holistic patient assessments.',
+		features: [
+			'*Multi-Agent Architecture:* Implemented specialized AI agents for different medical domains - *Cardiologist*, *Psychologist*, and *Pulmonologist* agents.',
+			'*Advanced LLM Integration:* Leveraged *GPT-4* and other large language models for sophisticated medical reasoning and diagnosis generation.',
+			'*Multi-threaded Processing:* Enabled parallel processing of patient data across different medical specialists for faster diagnosis.',
+			'*Production Deployment:* Successfully deployed on *HuggingFace Spaces* for real-world testing and demonstration.',
+			'*Comprehensive Medical Coverage:* System covers cardiovascular, mental health, and respiratory conditions with specialized domain knowledge.'
+		],
+		challenges: "The primary challenge was orchestrating multiple AI agents to work collaboratively while maintaining consistency in their diagnoses. Additionally, ensuring medical accuracy and handling edge cases where agents might provide conflicting recommendations required sophisticated consensus mechanisms and validation protocols.",
+		link: 'https://github.com/AjayTiwari94/Multi-AI-Agent-Medical-Diagnosis'
+	},
+	'pneumonia-detection': {
+		title: 'Pneumonia Detection System by X-Ray',
+		image: 'https://placehold.co/600x400/1c1917/facc15?text=Medical+X-Ray+AI',
+		problem: 'Pneumonia detection from chest X-rays is a critical healthcare challenge that requires rapid and accurate diagnosis to prevent complications. Traditional manual interpretation can be time-consuming and subject to human error. This project developed an AI system to provide automated, high-accuracy pneumonia detection from medical imaging.',
+		features: [
+			'*Clinical-Grade Accuracy:* Achieved *96.4% sensitivity* for pneumonia detection, ensuring minimal false negatives in critical diagnoses.',
+			'*Cross-Operator Validation:* Rigorously tested on *485 independent samples* with *86% accuracy* across different operators and imaging conditions.',
+			'*Professional Medical Integration:* Full *DICOM support* for seamless integration with hospital imaging systems.',
+			'*Automated Reporting:* Generates clinical-grade *PDF reports* with detailed analysis and confidence metrics for medical professionals.',
+			'*Real-Time Processing:* Optimized for rapid diagnosis with sub-second inference times for emergency situations.'
+		],
+		challenges: "The main challenges included handling variations in X-ray quality, different imaging equipment specifications, and ensuring the model generalizes across diverse patient populations. Medical imaging data augmentation and careful dataset curation were critical to achieving clinical-grade performance while avoiding biases in the training data.",
+		link: 'https://github.com/AjayTiwari94/Medical-Imaging-Diagnosis'
+	},
+	'darshana': {
+		title: 'Darshana - Digital Storytelling Platform',
+		image: 'https://placehold.co/600x400/1c1917/facc15?text=Cultural+Heritage+Platform',
+		problem: 'Cultural heritage and traditional stories are at risk of being lost in our digital age. There exists a gap between modern technology and cultural preservation, where younger generations lose connection with their heritage. Darshana addresses this by creating an immersive digital platform that makes cultural exploration engaging and accessible.',
+		features: [
+			'*Narad AI System:* Intelligent AI curator that personalizes cultural content recommendations based on user interests and heritage background.',
+			'*Immersive 360° Experiences:* Virtual monument visits using *360-degree photography* and *virtual reality* technology for authentic cultural immersion.',
+			'*Comprehensive Content Library:* Curated collections of traditional stories, historical monuments, folk tales, and cultural narratives from diverse regions.',
+			'*AR/VR Integration:* Advanced *Augmented Reality* and *Virtual Reality* features for interactive cultural exploration and learning.',
+			'*Multi-Modal Storytelling:* Combines text, audio, video, and interactive elements to create engaging narrative experiences.'
+		],
+		challenges: "The primary challenge lies in balancing technological innovation with cultural authenticity and sensitivity. Ensuring accurate representation of diverse cultures while making content accessible to global audiences requires extensive research, cultural consultation, and community involvement. Additionally, the technical challenge of seamlessly integrating AR/VR technologies with traditional storytelling formats demands innovative UX design approaches.",
+		link: 'https://github.com/AjayTiwari94/Darshana'
+	}
+	
 };
 
 function openModal(projectId) {
