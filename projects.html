@@ -20,13 +20,13 @@
             --text-secondary: #cbd5e1;
             --text-muted: #64748b;
         }
-        
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: 'Inter', sans-serif;
             background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
@@ -34,21 +34,21 @@
             line-height: 1.6;
             overflow-x: hidden;
         }
-        
+
         .gradient-bg {
             background: linear-gradient(135deg, #0f172a 0%, #1e293b 30%, #334155 60%, #475569 100%);
             background-size: 400% 400%;
             animation: gradientShift 15s ease infinite;
             position: relative;
         }
-        
+
         @keyframes gradientShift {
             0%, 100% { background-position: 0% 50%; }
             25% { background-position: 100% 25%; }
             50% { background-position: 100% 100%; }
             75% { background-position: 0% 100%; }
         }
-        
+
         .glass-card {
             background: rgba(30, 41, 59, 0.7);
             backdrop-filter: blur(20px);
@@ -56,20 +56,20 @@
             border-radius: 16px;
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        
+
         .glass-card:hover {
             transform: translateY(-4px);
             box-shadow: 0 20px 40px rgba(251, 191, 36, 0.15);
             border-color: rgba(251, 191, 36, 0.3);
         }
-        
+
         .gradient-text {
             background: linear-gradient(135deg, #f59e0b, #fbbf24, #fde68a);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-        
+
         .name-animate {
             background: linear-gradient(90deg, #f59e0b, #fbbf24, #fde68a, #f59e0b);
             background-size: 300% 100%;
@@ -77,22 +77,22 @@
             -webkit-text-fill-color: transparent;
             animation: nameFlow 4s ease infinite;
         }
-        
+
         @keyframes nameFlow {
             0%, 100% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
         }
-        
+
         .hero-title {
             font-weight: 900;
             letter-spacing: -0.02em;
         }
-        
+
         .section-title {
             font-weight: 700;
             letter-spacing: -0.01em;
         }
-        
+
         .nav-link {
             position: relative;
             transition: all 0.3s ease;
@@ -100,7 +100,7 @@
             border-radius: 8px;
             font-weight: 500;
         }
-        
+
         .nav-link::before {
             content: '';
             position: absolute;
@@ -114,7 +114,7 @@
             transition: all 0.3s ease;
             transform: scale(0.8);
         }
-        
+
         .nav-link::after {
             content: '';
             position: absolute;
@@ -126,32 +126,32 @@
             transition: all 0.3s ease;
             transform: translateX(-50%);
         }
-        
+
         .nav-link:hover::before {
             opacity: 1;
             transform: scale(1);
         }
-        
+
         .nav-link:hover::after,
         .nav-active::after {
             width: 80%;
         }
-        
+
         .nav-link:hover {
             color: #fbbf24;
             transform: translateY(-1px);
         }
-        
+
         .nav-active {
             color: #fbbf24;
             font-weight: 600;
         }
-        
+
         .nav-active::before {
             opacity: 1;
             transform: scale(1);
         }
-        
+
         .project-card {
             background: rgba(30, 41, 59, 0.6);
             border: 1px solid rgba(251, 191, 36, 0.1);
@@ -162,7 +162,7 @@
             overflow: hidden;
             cursor: pointer;
         }
-        
+
         .project-card::before {
             content: '';
             position: absolute;
@@ -173,17 +173,17 @@
             background: linear-gradient(90deg, transparent, rgba(251, 191, 36, 0.1), transparent);
             transition: left 0.5s ease;
         }
-        
+
         .project-card:hover::before {
             left: 100%;
         }
-        
+
         .project-card:hover {
             transform: translateY(-4px);
             border-color: rgba(251, 191, 36, 0.3);
             box-shadow: 0 15px 35px rgba(251, 191, 36, 0.1);
         }
-        
+
         .tech-tag {
             background: rgba(251, 191, 36, 0.1);
             border: 1px solid rgba(251, 191, 36, 0.2);
@@ -196,36 +196,39 @@
             display: inline-block;
             margin: 4px;
         }
-        
+
         .tech-tag:hover {
             background: rgba(251, 191, 36, 0.2);
             border-color: rgba(251, 191, 36, 0.4);
             transform: translateY(-2px);
         }
-        
+
         .fade-in {
             opacity: 0;
             transform: translateY(30px);
             animation: fadeInUp 0.8s ease forwards;
         }
-        
+
         @keyframes fadeInUp {
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
-        
+
         .fade-in-delay-1 { animation-delay: 0.1s; }
         .fade-in-delay-2 { animation-delay: 0.2s; }
         .fade-in-delay-3 { animation-delay: 0.3s; }
         .fade-in-delay-4 { animation-delay: 0.4s; }
-        
+        .fade-in-delay-5 { animation-delay: 0.5s; }
+        .fade-in-delay-6 { animation-delay: 0.6s; }
+        .fade-in-delay-7 { animation-delay: 0.7s; }
+
         .mobile-menu {
             background: rgba(15, 23, 42, 0.95);
             backdrop-filter: blur(20px);
         }
-        
+
         .project-icon {
             width: 48px;
             height: 48px;
@@ -236,19 +239,19 @@
             justify-content: center;
             margin-bottom: 16px;
         }
-        
+
         .modal-overlay {
             transition: opacity 0.3s ease;
         }
-        
+
         .modal-content {
             transition: transform 0.3s ease, opacity 0.3s ease;
         }
-        
+
         .body-no-scroll {
             overflow: hidden;
         }
-        
+
         .btn-primary {
             background: linear-gradient(135deg, #f59e0b, #fbbf24);
             border: none;
@@ -260,7 +263,7 @@
             position: relative;
             overflow: hidden;
         }
-        
+
         .btn-primary:hover {
             transform: translateY(-2px);
             box-shadow: 0 10px 25px rgba(245, 158, 11, 0.3);
@@ -280,7 +283,7 @@
                     </div>
                     <span class="text-2xl font-bold name-animate">Ajay Tiwari</span>
                 </a>
-                
+
                 <nav class="hidden md:flex space-x-2">
                     <a href="index.html" class="nav-link">Home</a>
                     <a href="skills.html" class="nav-link">Skills</a>
@@ -289,14 +292,14 @@
                     <a href="education.html" class="nav-link">Education</a>
                     <a href="contact.html" class="nav-link">Contact</a>
                 </nav>
-                
+
                 <button id="mobile-menu-button" class="md:hidden text-slate-300 hover:text-white transition-colors">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
                 </button>
             </div>
-            
+
             <div id="mobile-menu" class="hidden md:hidden mobile-menu mt-4 rounded-xl border border-slate-700/50">
                 <div class="py-2">
                     <a href="index.html" class="block px-4 py-3 text-slate-300 hover:text-amber-400 hover:bg-gradient-to-r hover:from-amber-500/10 hover:to-yellow-500/10 transition-all duration-300">
@@ -363,11 +366,11 @@
                         Featured <span class="gradient-text">Projects</span>
                     </h1>
                 </div>
-                
+
                 <div class="fade-in fade-in-delay-2">
                     <p class="text-lg text-slate-400 max-w-3xl mx-auto leading-relaxed">
                         A showcase of my technical expertise through real-world projects in AI/ML, 
-                        computer vision, and data analytics. Each project demonstrates problem-solving 
+                        computer vision, medical diagnosis, and innovative digital platforms. Each project demonstrates problem-solving 
                         skills and practical application of modern technologies.
                     </p>
                 </div>
@@ -380,13 +383,64 @@
                 <div class="text-center mb-12">
                     <h2 class="section-title text-4xl md:text-5xl mb-6 gradient-text">AI & Machine Learning</h2>
                     <p class="text-lg text-slate-400 max-w-2xl mx-auto">
-                        Advanced projects showcasing expertise in computer vision, NLP, and predictive modeling
+                        Advanced projects showcasing expertise in computer vision, NLP, multi-agent systems, and medical AI
                     </p>
                 </div>
-                
+
                 <div class="grid lg:grid-cols-2 gap-8">
+                    <!-- Multi-AI-Agent-Medical-Diagnosis -->
+                    <div class="project-card fade-in fade-in-delay-1" data-project-id="multi-ai-agent">
+                        <div class="flex items-start space-x-6">
+                            <div class="project-icon">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                                </svg>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-2xl font-bold text-white mb-3">Multi-AI-Agent Medical Diagnosis</h3>
+                                <p class="text-slate-300 mb-4 leading-relaxed">
+                                    Developed a sophisticated multi-agent system using TensorFlow and PyTorch, featuring specialized 
+                                    AI agents (Cardiologist, Psychologist, Pulmonologist) that collaborate to provide comprehensive 
+                                    medical diagnoses from patient reports.
+                                </p>
+
+                                <div class="space-y-3 mb-6">
+                                    <div class="flex items-center space-x-2">
+                                        <div class="w-2 h-2 bg-amber-400 rounded-full"></div>
+                                        <span class="text-slate-300 text-sm">Multi-threaded agent processing</span>
+                                    </div>
+                                    <div class="flex items-center space-x-2">
+                                        <div class="w-2 h-2 bg-amber-400 rounded-full"></div>
+                                        <span class="text-slate-300 text-sm">LLM integration with GPT-4 agents</span>
+                                    </div>
+                                    <div class="flex items-center space-x-2">
+                                        <div class="w-2 h-2 bg-amber-400 rounded-full"></div>
+                                        <span class="text-slate-300 text-sm">Deployed on HuggingFace Spaces</span>
+                                    </div>
+                                </div>
+
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="tech-tag">TensorFlow</span>
+                                    <span class="tech-tag">PyTorch</span>
+                                    <span class="tech-tag">Multi-Agent Systems</span>
+                                    <span class="tech-tag">Medical AI</span>
+                                    <span class="tech-tag">HuggingFace</span>
+                                </div>
+
+                                <div class="flex space-x-4">
+                                    <a href="https://huggingface.co/spaces/AjayTiwari94/Multi-AI-Agent-Medical-Diagnosis" target="_blank" class="text-amber-400 text-sm font-medium hover:text-amber-300 transition-colors">
+                                        Live Demo →
+                                    </a>
+                                    <div class="text-amber-400 text-sm font-medium cursor-pointer hover:text-amber-300 transition-colors">
+                                        View Details →
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- Traffic Signal Recognition -->
-                    <div class="project-card fade-in fade-in-delay-1" data-project-id="traffic-signal">
+                    <div class="project-card fade-in fade-in-delay-2" data-project-id="traffic-signal">
                         <div class="flex items-start space-x-6">
                             <div class="project-icon">
                                 <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -400,7 +454,7 @@
                                     Built a YOLOv8 model in PyTorch to detect traffic signals in real-time, 
                                     achieving an outstanding 97% mAP on the test dataset.
                                 </p>
-                                
+
                                 <div class="space-y-3 mb-6">
                                     <div class="flex items-center space-x-2">
                                         <div class="w-2 h-2 bg-amber-400 rounded-full"></div>
@@ -415,14 +469,14 @@
                                         <span class="text-slate-300 text-sm">Comprehensive data augmentation pipeline</span>
                                     </div>
                                 </div>
-                                
+
                                 <div class="flex flex-wrap gap-2 mb-4">
                                     <span class="tech-tag">PyTorch</span>
                                     <span class="tech-tag">YOLOv8</span>
                                     <span class="tech-tag">OpenCV</span>
                                     <span class="tech-tag">Computer Vision</span>
                                 </div>
-                                
+
                                 <div class="text-amber-400 text-sm font-medium cursor-pointer hover:text-amber-300 transition-colors">
                                     Click to view details →
                                 </div>
@@ -430,8 +484,58 @@
                         </div>
                     </div>
 
+                    <!-- Pneumonia Detection System -->
+                    <div class="project-card fade-in fade-in-delay-3" data-project-id="pneumonia-detection">
+                        <div class="flex items-start space-x-6">
+                            <div class="project-icon">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                                </svg>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-2xl font-bold text-white mb-3">Pneumonia Detection System by X-Ray</h3>
+                                <p class="text-slate-300 mb-4 leading-relaxed">
+                                    Advanced medical imaging AI system for pneumonia detection in chest X-rays with 96.4% sensitivity 
+                                    and 86% cross-operator validation accuracy. Features real-time analysis and clinical-grade reporting.
+                                </p>
+
+                                <div class="space-y-3 mb-6">
+                                    <div class="flex items-center space-x-2">
+                                        <div class="w-2 h-2 bg-amber-400 rounded-full"></div>
+                                        <span class="text-slate-300 text-sm">96.4% sensitivity for pneumonia detection</span>
+                                    </div>
+                                    <div class="flex items-center space-x-2">
+                                        <div class="w-2 h-2 bg-amber-400 rounded-full"></div>
+                                        <span class="text-slate-300 text-sm">Cross-operator validated on 485 samples</span>
+                                    </div>
+                                    <div class="flex items-center space-x-2">
+                                        <div class="w-2 h-2 bg-amber-400 rounded-full"></div>
+                                        <span class="text-slate-300 text-sm">DICOM support & PDF reports</span>
+                                    </div>
+                                </div>
+
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="tech-tag">Deep Learning</span>
+                                    <span class="tech-tag">Medical Imaging</span>
+                                    <span class="tech-tag">CNN</span>
+                                    <span class="tech-tag">HuggingFace</span>
+                                    <span class="tech-tag">Computer Vision</span>
+                                </div>
+
+                                <div class="flex space-x-4">
+                                    <a href="https://huggingface.co/spaces/AjayTiwari94/Pneumonia-Detection-System-by-Xray" target="_blank" class="text-amber-400 text-sm font-medium hover:text-amber-300 transition-colors">
+                                        Live Demo →
+                                    </a>
+                                    <div class="text-amber-400 text-sm font-medium cursor-pointer hover:text-amber-300 transition-colors">
+                                        View Details →
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- Instagram Sentiment Analysis -->
-                    <div class="project-card fade-in fade-in-delay-2" data-project-id="instagram-sentiment">
+                    <div class="project-card fade-in fade-in-delay-4" data-project-id="instagram-sentiment">
                         <div class="flex items-start space-x-6">
                             <div class="project-icon">
                                 <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -444,7 +548,7 @@
                                     Engineered an NLP pipeline to classify comment sentiment, achieving 54% accuracy 
                                     on a complex, nuanced dataset with 150+ emotion labels.
                                 </p>
-                                
+
                                 <div class="space-y-3 mb-6">
                                     <div class="flex items-center space-x-2">
                                         <div class="w-2 h-2 bg-amber-400 rounded-full"></div>
@@ -459,14 +563,14 @@
                                         <span class="text-slate-300 text-sm">86% recall for positive/negative sentiments</span>
                                     </div>
                                 </div>
-                                
+
                                 <div class="flex flex-wrap gap-2 mb-4">
                                     <span class="tech-tag">NLTK</span>
                                     <span class="tech-tag">VADER</span>
                                     <span class="tech-tag">NLP</span>
                                     <span class="tech-tag">Sentiment Analysis</span>
                                 </div>
-                                
+
                                 <div class="text-amber-400 text-sm font-medium cursor-pointer hover:text-amber-300 transition-colors">
                                     Click to view details →
                                 </div>
@@ -486,10 +590,10 @@
                         Projects demonstrating data-driven insights and interactive visualizations
                     </p>
                 </div>
-                
+
                 <div class="grid lg:grid-cols-2 gap-8">
                     <!-- Mental Health Analysis -->
-                    <div class="project-card fade-in fade-in-delay-3" data-project-id="mental-health">
+                    <div class="project-card fade-in fade-in-delay-5" data-project-id="mental-health">
                         <div class="flex items-start space-x-6">
                             <div class="project-icon">
                                 <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -502,7 +606,7 @@
                                     Built a logistic regression model (71% accuracy) to predict if a tech employee 
                                     would seek mental health treatment. Visualized insights with Power BI.
                                 </p>
-                                
+
                                 <div class="space-y-3 mb-6">
                                     <div class="flex items-center space-x-2">
                                         <div class="w-2 h-2 bg-amber-400 rounded-full"></div>
@@ -517,14 +621,14 @@
                                         <span class="text-slate-300 text-sm">Identified key predictive factors</span>
                                     </div>
                                 </div>
-                                
+
                                 <div class="flex flex-wrap gap-2 mb-4">
                                     <span class="tech-tag">Scikit-learn</span>
                                     <span class="tech-tag">Power BI</span>
                                     <span class="tech-tag">Logistic Regression</span>
                                     <span class="tech-tag">Data Visualization</span>
                                 </div>
-                                
+
                                 <div class="text-amber-400 text-sm font-medium cursor-pointer hover:text-amber-300 transition-colors">
                                     Click to view details →
                                 </div>
@@ -533,7 +637,7 @@
                     </div>
 
                     <!-- Customer Transaction Analysis -->
-                    <div class="project-card fade-in fade-in-delay-4" data-project-id="customer-transaction">
+                    <div class="project-card fade-in fade-in-delay-6" data-project-id="customer-transaction">
                         <div class="flex items-start space-x-6">
                             <div class="project-icon">
                                 <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -546,7 +650,7 @@
                                     Created an interactive dashboard in Tableau, integrated with Python, to analyze 
                                     banking transaction data and uncover key customer spending patterns.
                                 </p>
-                                
+
                                 <div class="space-y-3 mb-6">
                                     <div class="flex items-center space-x-2">
                                         <div class="w-2 h-2 bg-amber-400 rounded-full"></div>
@@ -561,14 +665,14 @@
                                         <span class="text-slate-300 text-sm">Real-time data processing</span>
                                     </div>
                                 </div>
-                                
+
                                 <div class="flex flex-wrap gap-2 mb-4">
                                     <span class="tech-tag">Tableau</span>
                                     <span class="tech-tag">Python</span>
                                     <span class="tech-tag">TabPy</span>
                                     <span class="tech-tag">Data Analysis</span>
                                 </div>
-                                
+
                                 <div class="text-amber-400 text-sm font-medium cursor-pointer hover:text-amber-300 transition-colors">
                                     Click to view details →
                                 </div>
@@ -578,16 +682,109 @@
                 </div>
             </div>
         </section>
+
+        <!-- Innovative Platforms -->
+        <section class="py-16 px-6">
+            <div class="container mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="section-title text-4xl md:text-5xl mb-6 gradient-text">Innovative Platforms</h2>
+                    <p class="text-lg text-slate-400 max-w-2xl mx-auto">
+                        Creative digital solutions combining storytelling, cultural heritage, and emerging technologies
+                    </p>
+                </div>
+
+                <div class="grid lg:grid-cols-1 gap-8 max-w-4xl mx-auto">
+                    <!-- Darshana -->
+                    <div class="project-card fade-in fade-in-delay-7" data-project-id="darshana">
+                        <div class="flex items-start space-x-6">
+                            <div class="project-icon">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                                </svg>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-2xl font-bold text-white mb-3">Darshana - Digital Storytelling Platform</h3>
+                                <p class="text-slate-300 mb-4 leading-relaxed">
+                                    My innovative startup concept: A comprehensive digital platform that connects users to their cultural 
+                                    heritage through immersive storytelling, featuring AI-powered content curation, virtual reality experiences, 
+                                    and interactive cultural exploration.
+                                </p>
+
+                                <div class="grid md:grid-cols-2 gap-4 mb-6">
+                                    <div class="space-y-3">
+                                        <h4 class="text-lg font-semibold text-amber-400">Core Features</h4>
+                                        <div class="flex items-center space-x-2">
+                                            <div class="w-2 h-2 bg-amber-400 rounded-full"></div>
+                                            <span class="text-slate-300 text-sm">Narad AI - Intelligent story curator</span>
+                                        </div>
+                                        <div class="flex items-center space-x-2">
+                                            <div class="w-2 h-2 bg-amber-400 rounded-full"></div>
+                                            <span class="text-slate-300 text-sm">360° Virtual monument visits</span>
+                                        </div>
+                                        <div class="flex items-center space-x-2">
+                                            <div class="w-2 h-2 bg-amber-400 rounded-full"></div>
+                                            <span class="text-slate-300 text-sm">AR/VR cultural immersion</span>
+                                        </div>
+                                    </div>
+                                    <div class="space-y-3">
+                                        <h4 class="text-lg font-semibold text-amber-400">Content Sections</h4>
+                                        <div class="flex items-center space-x-2">
+                                            <div class="w-2 h-2 bg-amber-400 rounded-full"></div>
+                                            <span class="text-slate-300 text-sm">Interactive story collections</span>
+                                        </div>
+                                        <div class="flex items-center space-x-2">
+                                            <div class="w-2 h-2 bg-amber-400 rounded-full"></div>
+                                            <span class="text-slate-300 text-sm">Historical monument database</span>
+                                        </div>
+                                        <div class="flex items-center space-x-2">
+                                            <div class="w-2 h-2 bg-amber-400 rounded-full"></div>
+                                            <span class="text-slate-300 text-sm">Folk tales & cultural narratives</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mb-6">
+                                    <h4 class="text-lg font-semibold text-amber-400 mb-3">Future Roadmap</h4>
+                                    <div class="grid md:grid-cols-2 gap-2">
+                                        <div class="flex items-center space-x-2">
+                                            <div class="w-2 h-2 bg-slate-500 rounded-full"></div>
+                                            <span class="text-slate-400 text-sm">Ticket booking integration</span>
+                                        </div>
+                                        <div class="flex items-center space-x-2">
+                                            <div class="w-2 h-2 bg-slate-500 rounded-full"></div>
+                                            <span class="text-slate-400 text-sm">Virtual guide assistance services</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="tech-tag">AI/ML</span>
+                                    <span class="tech-tag">AR/VR</span>
+                                    <span class="tech-tag">360° Technology</span>
+                                    <span class="tech-tag">Digital Platform</span>
+                                    <span class="tech-tag">Cultural Heritage</span>
+                                    <span class="tech-tag">Startup Concept</span>
+                                </div>
+
+                                <div class="text-amber-400 text-sm font-medium cursor-pointer hover:text-amber-300 transition-colors">
+                                    Click to view concept details → Will be available soon...
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
-   
+
     <!-- Footer -->
     <footer class="glass-card border-t border-slate-700/50">
         <div class="container mx-auto px-6 py-4">
             <div class="text-center">
                 <h3 class="text-xl font-bold name-animate mb-2">Ajay Tiwari</h3>
                 <p class="text-slate-400 mb-4">AI/ML Engineer & Data Analyst</p>
-                
+
                 <div class="flex justify-center space-x-6 mb-4">
                     <a href="https://github.com/AjayTiwari94" target="_blank" class="text-slate-400 hover:text-white transition-colors">
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -605,7 +802,7 @@
                         </svg>
                     </a>
                 </div>
-                
+
                 <p class="text-slate-500 text-xs">© 2024 Ajay Tiwari. All rights reserved.</p>
             </div>
         </div>
@@ -613,4 +810,4 @@
 
     <script src="global.js"></script>
 </body>
-</html> 
+</html>
