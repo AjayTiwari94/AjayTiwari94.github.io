@@ -203,6 +203,19 @@
             transform: translateY(-2px);
         }
 
+        .info-tag {
+            background: rgba(59, 130, 246, 0.1);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            color: #60a5fa;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+
         .fade-in {
             opacity: 0;
             transform: translateY(30px);
@@ -267,6 +280,63 @@
         .btn-primary:hover {
             transform: translateY(-2px);
             box-shadow: 0 10px 25px rgba(245, 158, 11, 0.3);
+        }
+
+        .hero-button {
+            background: linear-gradient(135deg, #f59e0b, #fbbf24);
+            border: none;
+            color: white;
+            font-weight: 600;
+            padding: 12px 24px;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .hero-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(245, 158, 11, 0.3);
+        }
+
+        .emoji-pop {
+            position: absolute;
+            font-size: 20px;
+            animation: emojiPop 0.8s ease-out forwards;
+            pointer-events: none;
+        }
+
+        @keyframes emojiPop {
+            0% {
+                transform: scale(0) translateY(0);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1.2) translateY(-20px);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(1) translateY(-40px);
+                opacity: 0;
+            }
+        }
+
+        .typing-cursor {
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+
+        .fade-in-up {
+            opacity: 1;
+            transform: translateY(0);
         }
     </style>
 </head>
@@ -432,7 +502,7 @@
                                         Live Demo →
                                     </a>
                                     <div class="text-amber-400 text-sm font-medium cursor-pointer hover:text-amber-300 transition-colors">
-                                        View Details →
+                                        Click to view details →
                                     </div>
                                 </div>
                             </div>
@@ -527,7 +597,7 @@
                                         Live Demo →
                                     </a>
                                     <div class="text-amber-400 text-sm font-medium cursor-pointer hover:text-amber-300 transition-colors">
-                                        View Details →
+                                        Click to view details →
                                     </div>
                                 </div>
                             </div>
@@ -703,7 +773,15 @@
                                 </svg>
                             </div>
                             <div class="flex-1">
-                                <h3 class="text-2xl font-bold text-white mb-3">Darshana - Digital Storytelling Platform</h3>
+                                <div class="flex items-center gap-3 mb-3">
+                                    <h3 class="text-2xl font-bold text-white">Darshana - Digital Storytelling Platform</h3>
+                                    <span class="info-tag">
+                                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                        </svg>
+                                        Concept Phase
+                                    </span>
+                                </div>
                                 <p class="text-slate-300 mb-4 leading-relaxed">
                                     My innovative startup concept: A comprehensive digital platform that connects users to their cultural 
                                     heritage through immersive storytelling, featuring AI-powered content curation, virtual reality experiences, 
@@ -767,7 +845,7 @@
                                 </div>
 
                                 <div class="text-amber-400 text-sm font-medium cursor-pointer hover:text-amber-300 transition-colors">
-                                    Click to view concept details → Will be available soon...
+                                    Click to view concept details →
                                 </div>
                             </div>
                         </div>
