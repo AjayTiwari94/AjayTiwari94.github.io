@@ -23,10 +23,10 @@ const projectDetails = {
 		
         problem: 'The goal was to develop a high-performance, real-time object detection model capable of accurately identifying and classifying traffic signals from a live video feed. This has direct applications in autonomous driving and intelligent traffic management systems.',
         features: [
-            '*High Accuracy:* Achieved an outstanding *97% mean Average Precision (mAP)* on the test dataset.',
-            '*Real-Time Performance:* Implemented with OpenCV for efficient video capture and real-time inference.',
-            '*Robust Training:* Processed and augmented over 10,000 images from the LISA dataset to handle various lighting and weather conditions.',
-            '*Tech Stack:* Python, PyTorch, YOLOv8, OpenCV, Computer Vision.'
+            '<Strong>High Accuracy:</Strong> Achieved an outstanding *97% mean Average Precision (mAP)* on the test dataset.',
+            '<Strong>Real-Time Performance:</Strong> Implemented with OpenCV for efficient video capture and real-time inference.',
+            '<Strong>Robust Training:</Strong> Processed and augmented over 10,000 images from the LISA dataset to handle various lighting and weather conditions.',
+            '<Strong>Tech Stack:</Strong> Python, PyTorch, YOLOv8, OpenCV, Computer Vision.'
         ],
         challenges: "A key challenge was ensuring the model's robustness to different environmental conditions. To solve this, I implemented a comprehensive data augmentation pipeline, including random brightness adjustments, rotations, and noise injection, which significantly improved the model's generalization capabilities.",
         link: 'https://github.com/AjayTiwari94/traffic-signal-detection'
@@ -36,10 +36,10 @@ const projectDetails = {
         image: 'https://placehold.co/600x400/1c1917/facc15?text=Sentiment+Analysis',
         problem: "This project aimed to classify user sentiment from a dataset of Instagram comments with over 150 unique, nuanced emotion labels. The core task was to standardize these labels and evaluate a pre-trained NLP model's ability to handle complex, real-world text data.",
         features: [
-            '*Label Standardization:* Engineered a mapping function to consolidate 150+ specific emotion labels into three standard categories (Positive, Negative, Neutral).',
-            "*Model Evaluation:* Applied and evaluated NLTK's VADER model, achieving *54% overall accuracy* and identifying a high recall of *86%* for both positive and negative sentiments.",
-            "*Insight Generation:* The analysis revealed the model's strength in identifying clear polarity and its challenges with subtle, neutral text.",
-            '*Tech Stack:* Python, NLTK, VADER, Pandas, Scikit-learn, Seaborn.'
+            '<Strong>Label Standardization:</Strong> Engineered a mapping function to consolidate 150+ specific emotion labels into three standard categories (Positive, Negative, Neutral).',
+            "<Strong>Model Evaluation:</Strong> Applied and evaluated NLTK's VADER model, achieving *54% overall accuracy* and identifying a high recall of *86%* for both positive and negative sentiments.",
+            "<Strong>Insight Generation:</Strong> The analysis revealed the model's strength in identifying clear polarity and its challenges with subtle, neutral text.",
+            '<Strong>Tech Stack:</Strong> Python, NLTK, VADER, Pandas, Scikit-learn, Seaborn.'
         ],
         challenges: "The primary challenge was the dataset's noisy and highly varied labels. The solution was to create a robust mapping system that grouped related emotions, allowing for a fair and meaningful evaluation of the sentiment analysis model.",
         link: 'https://github.com/AjayTiwari94/Instagram-Sentiment-Analysis'
@@ -50,10 +50,10 @@ const projectDetails = {
 
         problem: 'This project analyzed survey data to predict whether an employee in the tech industry would seek treatment for a mental health condition. The goal was to identify key factors influencing this decision to inform potential improvements in workplace support systems.',
         features: [
-            '*Predictive Modeling:* Built a Logistic Regression model with *71% accuracy* to classify treatment-seeking behavior.',
-            '*Feature Importance:* Identified \'family_history\' as the most significant predictor through model coefficient analysis.',
-            '*Interactive Dashboard:* Designed and developed a Power BI dashboard to present the findings and allow for interactive data exploration.',
-            '*Tech Stack:* Python, Scikit-learn, Pandas, Power BI.'
+            '<Strong>Predictive Modeling:</Strong> Built a Logistic Regression model with *71% accuracy* to classify treatment-seeking behavior.',
+            '<Strong>Feature Importance:</Strong> Identified \'family_history\' as the most significant predictor through model coefficient analysis.',
+            '<Strong>Interactive Dashboard:</Strong> Designed and developed a Power BI dashboard to present the findings and allow for interactive data exploration.',
+            '<Strong>Tech Stack:</Strong> Python, Scikit-learn, Pandas, Power BI.'
         ],
         challenges: "A major challenge was cleaning the raw survey data, which contained inconsistent and invalid entries in columns like 'Age' and 'Gender'. This was solved by implementing data cleaning functions to filter outliers and consolidate categories into a standardized format.",
         link: 'https://github.com/AjayTiwari94/Mental-Health-Data-Analysis-PowerBi-Python'
@@ -63,10 +63,10 @@ const projectDetails = {
         image: 'https://placehold.co/600x400/1c1917/facc15?text=Tableau+Dashboard',
         problem: 'The objective was to analyze a raw banking transaction dataset to uncover key customer spending patterns and behaviors, and to present these insights in a dynamic, interactive dashboard for business stakeholders.',
         features: [
-            '*Dynamic Dashboard:* Created an interactive dashboard in Tableau to visualize customer spending habits.',
-            '*Python Integration:* Leveraged *TabPy* to integrate Python scripts directly into the Tableau dashboard, enabling more complex, real-time data processing.',
-            '*Insight Generation:* The analysis successfully identified high-frequency transaction categories, providing a data-driven basis for potential marketing opportunities.',
-            '*Tech Stack:* Tableau, Python (Pandas, NumPy), TabPy.'
+            '<Strong>Dynamic Dashboard:</Strong> Created an interactive dashboard in Tableau to visualize customer spending habits.',
+            '<Strong>Python Integration:</Strong> Leveraged *TabPy* to integrate Python scripts directly into the Tableau dashboard, enabling more complex, real-time data processing.',
+            '<Strong>Insight Generation:</Strong> The analysis successfully identified high-frequency transaction categories, providing a data-driven basis for potential marketing opportunities.',
+            '<Strong>Tech Stack:</Strong> Tableau, Python (Pandas, NumPy), TabPy.'
         ],
         challenges: "The main technical challenge was establishing a stable and efficient connection between Tableau and a live Python backend via TabPy. This was overcome by carefully configuring the server and optimizing the Pandas scripts to ensure fast data processing and a smooth user experience in the dashboard.",
         link: 'https://github.com/AjayTiwari94/Customer-Transaction-Analysis'
@@ -76,11 +76,11 @@ const projectDetails = {
 		image: 'https://placehold.co/600x400/1c1917/facc15?text=Multi-AI+Medical+System',
 		problem: 'The healthcare industry faces challenges in providing comprehensive medical diagnoses due to the complexity of patient conditions that often require expertise from multiple medical specialties. This project aimed to create a collaborative AI system where specialized medical AI agents work together to provide holistic patient assessments.',
 		features: [
-			'*Multi-Agent Architecture:* Implemented specialized AI agents for different medical domains - *Cardiologist*, *Psychologist*, and *Pulmonologist* agents.',
-			'*Advanced LLM Integration:* Leveraged *GPT-4* and other large language models for sophisticated medical reasoning and diagnosis generation.',
-			'*Multi-threaded Processing:* Enabled parallel processing of patient data across different medical specialists for faster diagnosis.',
-			'*Production Deployment:* Successfully deployed on *HuggingFace Spaces* for real-world testing and demonstration.',
-			'*Comprehensive Medical Coverage:* System covers cardiovascular, mental health, and respiratory conditions with specialized domain knowledge.'
+			'<Strong>Multi-Agent Architecture:</Strong> Implemented specialized AI agents for different medical domains - *Cardiologist*, *Psychologist*, and *Pulmonologist* agents.',
+			'<Strong>Advanced LLM Integration:</Strong> Leveraged *GPT-4* and other large language models for sophisticated medical reasoning and diagnosis generation.',
+			'<Strong>Multi-threaded Processing:</Strong> Enabled parallel processing of patient data across different medical specialists for faster diagnosis.',
+			'<Strong>Production Deployment:</Strong> Successfully deployed on *HuggingFace Spaces* for real-world testing and demonstration.',
+			'<Strong>Comprehensive Medical Coverage:</Strong> System covers cardiovascular, mental health, and respiratory conditions with specialized domain knowledge.'
 		],
 		challenges: "The primary challenge was orchestrating multiple AI agents to work collaboratively while maintaining consistency in their diagnoses. Additionally, ensuring medical accuracy and handling edge cases where agents might provide conflicting recommendations required sophisticated consensus mechanisms and validation protocols.",
 		link: 'https://github.com/AjayTiwari94/Multi-AI-Agent-Medical-Diagnosis'
@@ -90,11 +90,11 @@ const projectDetails = {
 		image: 'https://placehold.co/600x400/1c1917/facc15?text=Medical+X-Ray+AI',
 		problem: 'Pneumonia detection from chest X-rays is a critical healthcare challenge that requires rapid and accurate diagnosis to prevent complications. Traditional manual interpretation can be time-consuming and subject to human error. This project developed an AI system to provide automated, high-accuracy pneumonia detection from medical imaging.',
 		features: [
-			'*Clinical-Grade Accuracy:* Achieved *96.4% sensitivity* for pneumonia detection, ensuring minimal false negatives in critical diagnoses.',
-			'*Cross-Operator Validation:* Rigorously tested on *485 independent samples* with *86% accuracy* across different operators and imaging conditions.',
-			'*Professional Medical Integration:* Full *DICOM support* for seamless integration with hospital imaging systems.',
-			'*Automated Reporting:* Generates clinical-grade *PDF reports* with detailed analysis and confidence metrics for medical professionals.',
-			'*Real-Time Processing:* Optimized for rapid diagnosis with sub-second inference times for emergency situations.'
+			'<Strong>Clinical-Grade Accuracy:</Strong> Achieved *96.4% sensitivity* for pneumonia detection, ensuring minimal false negatives in critical diagnoses.',
+			'<Strong>Cross-Operator Validation:</Strong> Rigorously tested on *485 independent samples* with *86% accuracy* across different operators and imaging conditions.',
+			'<Strong>Professional Medical Integration:</Strong> Full *DICOM support* for seamless integration with hospital imaging systems.',
+			'<Strong>Automated Reporting:</Strong> Generates clinical-grade *PDF reports* with detailed analysis and confidence metrics for medical professionals.',
+			'<Strong>Real-Time Processing:</Strong> Optimized for rapid diagnosis with sub-second inference times for emergency situations.'
 		],
 		challenges: "The main challenges included handling variations in X-ray quality, different imaging equipment specifications, and ensuring the model generalizes across diverse patient populations. Medical imaging data augmentation and careful dataset curation were critical to achieving clinical-grade performance while avoiding biases in the training data.",
 		link: 'https://github.com/AjayTiwari94/Medical-Imaging-Diagnosis'
@@ -104,14 +104,28 @@ const projectDetails = {
 		image: 'https://placehold.co/600x400/1c1917/facc15?text=Cultural+Heritage+Platform',
 		problem: 'Cultural heritage and traditional stories are at risk of being lost in our digital age. There exists a gap between modern technology and cultural preservation, where younger generations lose connection with their heritage. Darshana addresses this by creating an immersive digital platform that makes cultural exploration engaging and accessible.',
 		features: [
-			'*Narad AI System:* Intelligent AI curator that personalizes cultural content recommendations based on user interests and heritage background.',
-			'*Immersive 360° Experiences:* Virtual monument visits using *360-degree photography* and *virtual reality* technology for authentic cultural immersion.',
-			'*Comprehensive Content Library:* Curated collections of traditional stories, historical monuments, folk tales, and cultural narratives from diverse regions.',
-			'*AR/VR Integration:* Advanced *Augmented Reality* and *Virtual Reality* features for interactive cultural exploration and learning.',
-			'*Multi-Modal Storytelling:* Combines text, audio, video, and interactive elements to create engaging narrative experiences.'
+			'<Strong>Narad AI System:</Strong> Intelligent AI curator that personalizes cultural content recommendations based on user interests and heritage background.',
+			'<Strong>Immersive 360° Experiences:</Strong> Virtual monument visits using <Strong>360-degree photography</Strong> and <Strong>virtual reality</Strong> technology for authentic cultural immersion.',
+			'<Strong>Comprehensive Content Library:</Strong> Curated collections of traditional stories, historical monuments, folk tales, and cultural narratives from diverse regions.',
+			'<Strong>AR/VR Integration:</Strong> Advanced <Strong>Augmented Reality</Strong> and <Strong>Virtual Reality</Strong> features for interactive cultural exploration and learning.',
+			'<Strong>Multi-Modal Storytelling:</Strong> Combines text, audio, video, and interactive elements to create engaging narrative experiences.'
 		],
 		challenges: "The primary challenge lies in balancing technological innovation with cultural authenticity and sensitivity. Ensuring accurate representation of diverse cultures while making content accessible to global audiences requires extensive research, cultural consultation, and community involvement. Additionally, the technical challenge of seamlessly integrating AR/VR technologies with traditional storytelling formats demands innovative UX design approaches.",
 		link: 'https://github.com/AjayTiwari94/Darshana'
+	},
+	'data-analytics-MySQL': {
+		title: 'Data Analysis using MySQL',
+		image: 'https://placehold.co/600x400/1c1917/facc15?text=Data+Analytics+Using+MySQL',
+		problem: 'This project analyzed a real-world layoff dataset to understand workforce trends across companies, industries, and time periods. The goal was to transform raw, unstructured data into meaningful insights that highlight patterns and support better data-driven understanding of layoffs.',
+		features: [
+			'<Strong>Data Cleaning:</Strong> Cleaned and standardized raw dataset by handling missing values, duplicates, and inconsistencies.',
+			'<Strong>Data Transformation:</Strong> Structured data into a usable format for efficient querying and analysis.',
+			'<Strong>SQL Analysis:</Strong> Used SQL queries (aggregations, CTEs, joins, filtering) to explore layoffs across industries and timelines.',
+			'<Strong>Insight Generation:</Strong> Identified key trends and patterns in layoffs across sectors and locations.',
+			'<Strong>Data Exploration:</Strong> Explored dataset using filtering and grouping to understand distributions and relationships across key variables.'
+		],
+		challenges: "A major challenge was dealing with inconsistent and messy data, including missing values and duplicate records. This was solved by applying data cleaning techniques such as removing duplicates, handling null values, and standardizing fields to ensure accurate and reliable analysis.",
+		link: 'https://github.com/AjayTiwari94/Data_Analysis-MYSQL'
 	}
 	
 };
