@@ -354,6 +354,101 @@
             visibility: visible; 
             transform: translate(-50%, -50%) scale(1); 
         }
+    
+        
+        /* Ultra Premium Interactive UI */
+        .mouse-glow {
+            position: fixed;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(245, 158, 11, 0.04) 0%, rgba(15, 23, 42, 0) 50%);
+            border-radius: 50%;
+            pointer-events: none;
+            transform: translate(-50%, -50%);
+            z-index: 0;
+            mix-blend-mode: screen;
+        }
+
+        /* Button Shimmer Effect */
+        .btn-secondary, .submit-button, .btn-primary {
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        .btn-secondary::after, .submit-button::after, .btn-primary::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -150%;
+            width: 50%;
+            height: 200%;
+            background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0) 100%);
+            transform: rotate(30deg);
+            transition: left 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+            pointer-events: none;
+            z-index: -1;
+        }
+        .btn-secondary:hover::after, .submit-button:hover::after, .btn-primary:hover::after {
+            left: 150%;
+        }
+
+        /* Responsive Navbar Glass Morph */
+        header {
+            transition: background-color 0.4s ease, border-color 0.4s ease, backdrop-filter 0.4s ease;
+        }
+        header.scrolled {
+            background: rgba(15, 23, 42, 0.95) !important;
+            border-bottom: 1px solid rgba(245, 158, 11, 0.2) !important;
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(24px);
+        }
+        header.scrolled .py-4 {
+            padding-top: 0.75rem !important;
+            padding-bottom: 0.75rem !important;
+            transition: padding 0.4s ease;
+        }
+
+        /* Premium Global UI Refinements added by AI */
+        
+        /* 1. Dynamic Scroll Reveal */
+        .reveal-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .reveal-on-scroll.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* 2. Custom Scrollbar */
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: #0f172a; }
+        ::-webkit-scrollbar-thumb { background: rgba(245, 158, 11, 0.5); border-radius: 5px; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(245, 158, 11, 0.8); }
+
+        /* 3. Subtle Background Dot Mesh */
+        .gradient-bg::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: radial-gradient(rgba(245, 158, 11, 0.07) 1px, transparent 1px);
+            background-size: 32px 32px;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* 4. Enhanced Glass Card Hover Glow */
+        .glass-card:hover, .contact-card:hover, .feature-card:hover, .stats-card:hover, .project-card:hover {
+            box-shadow: 0 0 30px rgba(245, 158, 11, 0.15), 0 20px 40px rgba(0, 0, 0, 0.4) !important;
+            border-color: rgba(245, 158, 11, 0.4) !important;
+        }
+
+        /* 5. Glowing Typography for headers */
+        h1.gradient-text, h2.gradient-text {
+            text-shadow: 0 0 25px rgba(245, 158, 11, 0.3);
+        }
+
     </style>
 </head>
 <body class="gradient-bg min-h-screen">
@@ -373,19 +468,19 @@
                 <nav class="hidden md:flex space-x-2">
                     <a href="index.html" class="nav-link">Home</a>
                     <a href="skills.html" class="nav-link">Skills</a>
-                    <a href="experience.html" class="nav-link nav-active">Experience</a>
+                    <a href="experience.html" class="nav-link">Experience</a>
                     <a href="projects.html" class="nav-link">Projects</a>
                     <a href="education.html" class="nav-link">Education</a>
-                    <a href="contact.html" class="nav-link">Contact</a>
-                    <a href="Ajay_Tiwari_Data_Analyst_Resume.pdf" target="_blank" class="nav-link">Resume</a>
-                </nav>
+                    <a href="contact.html" class="nav-link nav-active">Contact</a>
+                    <a href="https://drive.google.com/file/d/1yXN_zHLO33Mmpn5P1HLs4lY6R19ng8SD/view?usp=drivesdk" target="_blank" class="nav-link">Resume</a>
+            </nav>
                 
                 <button id="mobile-menu-button" class="md:hidden text-slate-300 hover:text-white transition-colors">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
-                </button>
-            </div>
+            </button>
+        </div>
             
             <div id="mobile-menu" class="hidden md:hidden mobile-menu mt-4 rounded-xl border border-slate-700/50">
                 <div class="py-2">
@@ -405,7 +500,7 @@
                             Skills
                         </span>
                     </a>
-                    <a href="experience.html" class="block px-4 py-3 text-slate-300 hover:text-amber-400 hover:bg-gradient-to-r hover:from-amber-500/10 hover:to-yellow-500/10 transition-all duration-300 nav-active">
+                    <a href="experience.html" class="block px-4 py-3 text-slate-300 hover:text-amber-400 hover:bg-gradient-to-r hover:from-amber-500/10 hover:to-yellow-500/10 transition-all duration-300">
                         <span class="flex items-center">
                             <svg class="w-4 h-4 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.605-9-1.65M8.671 15.194l.766-.766a2 2 0 01-1.023-.587l1.805-1.805a2 2 0 012.828 0l1.805 1.805a2 2 0 01-.587 1.023l-.766.766M12 15l3-9 3 9-3 9-3-9z"></path>
@@ -431,7 +526,7 @@
                             Education
                         </span>
                     </a>
-                    <a href="contact.html" class="block px-4 py-3 text-slate-300 hover:text-amber-400 hover:bg-gradient-to-r hover:from-amber-500/10 hover:to-yellow-500/10 transition-all duration-300">
+                    <a href="contact.html" class="block px-4 py-3 text-slate-300 hover:text-amber-400 hover:bg-gradient-to-r hover:from-amber-500/10 hover:to-yellow-500/10 transition-all duration-300 nav-active">
                         <span class="flex items-center">
                             <svg class="w-4 h-4 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
@@ -439,7 +534,7 @@
                             Contact
                         </span>
                     </a>
-                    <a href="Ajay_Tiwari_Data_Analyst_Resume.pdf" target="_blank" class="block px-4 py-3 text-slate-300 hover:text-amber-400 hover:bg-gradient-to-r hover:from-amber-500/10 hover:to-yellow-500/10 transition-all duration-300">
+                    <a href="https://drive.google.com/file/d/1yXN_zHLO33Mmpn5P1HLs4lY6R19ng8SD/view?usp=drivesdk" target="_blank" class="block px-4 py-3 text-slate-300 hover:text-amber-400 hover:bg-gradient-to-r hover:from-amber-500/10 hover:to-yellow-500/10 transition-all duration-300">
                         <span class="flex items-center">
                             <svg class="w-4 h-4 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
@@ -492,7 +587,7 @@
                                 </div>
                                 <div>
                                     <h4 class="text-slate-100 font-semibold">Email</h4>
-                                    <p class="text-slate-300">ajay.tiwari936@outlook.com</p>
+                                    <p class="text-slate-300">ajay.tiwari9094@gmail.com</p>
                                 </div>
                             </div>
                             <div class="contact-info-item">
@@ -504,7 +599,7 @@
                                 </div>
                                 <div>
                                     <h4 class="text-slate-100 font-semibold">Location</h4>
-                                    <p class="text-slate-300">Greater Noida, Uttar Pradesh, India</p>
+                                    <p class="text-slate-300">Noida</p>
                                 </div>
                             </div>
                             <div class="contact-info-item">
@@ -567,7 +662,11 @@
                     <h3 class="text-3xl font-bold text-center mb-8 gradient-text section-title">Find me on the web</h3>
                     <div class="grid md:grid-cols-3 gap-6">
                         <a href="https://github.com/AjayTiwari94" target="_blank" class="contact-card p-6 text-center hover-scale social-card group">
-                            <div class="text-4xl mb-4">🐙</div>
+                            <div class="mb-4 flex justify-center text-slate-300 group-hover:text-amber-400 transition-colors duration-300">
+                                <svg class="w-12 h-12" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                            </div>
                             <h4 class="text-xl font-bold text-slate-100 mb-2 group-hover:text-amber-400 transition-colors duration-300">GitHub</h4>
                             <p class="text-slate-300 text-sm mb-4">Check out my projects and contributions</p>
                             <div class="flex justify-center space-x-2">
@@ -576,7 +675,11 @@
                             </div>
                         </a>
                         <a href="https://linkedin.com/in/ajay-tiwari-94" target="_blank" class="contact-card p-6 text-center hover-scale social-card group">
-                            <div class="text-4xl mb-4">💼</div>
+                            <div class="mb-4 flex justify-center text-slate-300 group-hover:text-amber-400 transition-colors duration-300">
+                                <svg class="w-12 h-12" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                </svg>
+                            </div>
                             <h4 class="text-xl font-bold text-slate-100 mb-2 group-hover:text-amber-400 transition-colors duration-300">LinkedIn</h4>
                             <p class="text-slate-300 text-sm mb-4">Connect professionally and stay updated</p>
                             <div class="flex justify-center space-x-2">
@@ -585,7 +688,11 @@
                             </div>
                         </a>
                         <a href="https://leetcode.com/u/AjayTiwari94/" target="_blank" class="contact-card p-6 text-center hover-scale social-card group">
-                            <div class="text-4xl mb-4">⚡</div>
+                            <div class="mb-4 flex justify-center text-slate-300 group-hover:text-amber-400 transition-colors duration-300">
+                                <svg class="w-12 h-12" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M13.483 0a1.374 1.374 0 0 0-1.374 1.374v9.735a1.374 1.374 0 0 0 1.374 1.374h9.147a1.374 1.374 0 0 0 1.374-1.374V1.374A1.374 1.374 0 0 0 22.63 0zM4.414 12.483a1.374 1.374 0 0 0-1.374 1.374v9.147a1.374 1.374 0 0 0 1.374 1.374h9.734a1.374 1.374 0 0 0 1.374-1.374v-3.445l-1.374-1.374v3.445H4.414v-9.147h3.445l1.374-1.374z"/>
+                                </svg>
+                            </div>
                             <h4 class="text-xl font-bold text-slate-100 mb-2 group-hover:text-amber-400 transition-colors duration-300">LeetCode</h4>
                             <p class="text-slate-300 text-sm mb-4">View my problem-solving skills</p>
                             <div class="flex justify-center space-x-2">

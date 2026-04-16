@@ -284,6 +284,101 @@
             justify-content: center;
             margin-bottom: 16px;
         }
+    
+        
+        /* Ultra Premium Interactive UI */
+        .mouse-glow {
+            position: fixed;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(245, 158, 11, 0.04) 0%, rgba(15, 23, 42, 0) 50%);
+            border-radius: 50%;
+            pointer-events: none;
+            transform: translate(-50%, -50%);
+            z-index: 0;
+            mix-blend-mode: screen;
+        }
+
+        /* Button Shimmer Effect */
+        .btn-secondary, .submit-button, .btn-primary {
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        .btn-secondary::after, .submit-button::after, .btn-primary::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -150%;
+            width: 50%;
+            height: 200%;
+            background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0) 100%);
+            transform: rotate(30deg);
+            transition: left 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+            pointer-events: none;
+            z-index: -1;
+        }
+        .btn-secondary:hover::after, .submit-button:hover::after, .btn-primary:hover::after {
+            left: 150%;
+        }
+
+        /* Responsive Navbar Glass Morph */
+        header {
+            transition: background-color 0.4s ease, border-color 0.4s ease, backdrop-filter 0.4s ease;
+        }
+        header.scrolled {
+            background: rgba(15, 23, 42, 0.95) !important;
+            border-bottom: 1px solid rgba(245, 158, 11, 0.2) !important;
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(24px);
+        }
+        header.scrolled .py-4 {
+            padding-top: 0.75rem !important;
+            padding-bottom: 0.75rem !important;
+            transition: padding 0.4s ease;
+        }
+
+        /* Premium Global UI Refinements added by AI */
+        
+        /* 1. Dynamic Scroll Reveal */
+        .reveal-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .reveal-on-scroll.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* 2. Custom Scrollbar */
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: #0f172a; }
+        ::-webkit-scrollbar-thumb { background: rgba(245, 158, 11, 0.5); border-radius: 5px; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(245, 158, 11, 0.8); }
+
+        /* 3. Subtle Background Dot Mesh */
+        .gradient-bg::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: radial-gradient(rgba(245, 158, 11, 0.07) 1px, transparent 1px);
+            background-size: 32px 32px;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* 4. Enhanced Glass Card Hover Glow */
+        .glass-card:hover, .contact-card:hover, .feature-card:hover, .stats-card:hover, .project-card:hover {
+            box-shadow: 0 0 30px rgba(245, 158, 11, 0.15), 0 20px 40px rgba(0, 0, 0, 0.4) !important;
+            border-color: rgba(245, 158, 11, 0.4) !important;
+        }
+
+        /* 5. Glowing Typography for headers */
+        h1.gradient-text, h2.gradient-text {
+            text-shadow: 0 0 25px rgba(245, 158, 11, 0.3);
+        }
+
     </style>
 </head>
 <body class="gradient-bg min-h-screen">
@@ -299,24 +394,24 @@
                     </div>
                     <span class="text-2xl font-bold name-animate">Ajay Tiwari</span>
                 </a>
-
+                
                 <nav class="hidden md:flex space-x-2">
                     <a href="index.html" class="nav-link">Home</a>
                     <a href="skills.html" class="nav-link">Skills</a>
-                    <a href="experience.html" class="nav-link">Experience</a>
-                    <a href="projects.html" class="nav-link nav-active">Projects</a>
+                    <a href="experience.html" class="nav-link nav-active">Experience</a>
+                    <a href="projects.html" class="nav-link">Projects</a>
                     <a href="education.html" class="nav-link">Education</a>
                     <a href="contact.html" class="nav-link">Contact</a>
-                    <a href="Ajay_Tiwari_Data_Analyst_Resume.pdf" target="_blank" class="nav-link">Resume</a>
+                    <a href="https://drive.google.com/file/d/1yXN_zHLO33Mmpn5P1HLs4lY6R19ng8SD/view?usp=drivesdk" target="_blank" class="nav-link">Resume</a>
                 </nav>
-
+                
                 <button id="mobile-menu-button" class="md:hidden text-slate-300 hover:text-white transition-colors">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
                 </button>
             </div>
-
+            
             <div id="mobile-menu" class="hidden md:hidden mobile-menu mt-4 rounded-xl border border-slate-700/50">
                 <div class="py-2">
                     <a href="index.html" class="block px-4 py-3 text-slate-300 hover:text-amber-400 hover:bg-gradient-to-r hover:from-amber-500/10 hover:to-yellow-500/10 transition-all duration-300">
@@ -335,7 +430,7 @@
                             Skills
                         </span>
                     </a>
-                    <a href="experience.html" class="block px-4 py-3 text-slate-300 hover:text-amber-400 hover:bg-gradient-to-r hover:from-amber-500/10 hover:to-yellow-500/10 transition-all duration-300">
+                    <a href="experience.html" class="block px-4 py-3 text-slate-300 hover:text-amber-400 hover:bg-gradient-to-r hover:from-amber-500/10 hover:to-yellow-500/10 transition-all duration-300 nav-active">
                         <span class="flex items-center">
                             <svg class="w-4 h-4 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.605-9-1.65M8.671 15.194l.766-.766a2 2 0 01-1.023-.587l1.805-1.805a2 2 0 012.828 0l1.805 1.805a2 2 0 01-.587 1.023l-.766.766M12 15l3-9 3 9-3 9-3-9z"></path>
@@ -343,7 +438,7 @@
                             Experience
                         </span>
                     </a>
-                    <a href="projects.html" class="block px-4 py-3 text-slate-300 hover:text-amber-400 hover:bg-gradient-to-r hover:from-amber-500/10 hover:to-yellow-500/10 transition-all duration-300 nav-active">
+                    <a href="projects.html" class="block px-4 py-3 text-slate-300 hover:text-amber-400 hover:bg-gradient-to-r hover:from-amber-500/10 hover:to-yellow-500/10 transition-all duration-300">
                         <span class="flex items-center">
                             <svg class="w-4 h-4 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
@@ -369,7 +464,7 @@
                             Contact
                         </span>
                     </a>
-                    <a href="Ajay_Tiwari_Data_Analyst_Resume.pdf" target="_blank" class="block px-4 py-3 text-slate-300 hover:text-amber-400 hover:bg-gradient-to-r hover:from-amber-500/10 hover:to-yellow-500/10 transition-all duration-300">
+                    <a href="https://drive.google.com/file/d/1yXN_zHLO33Mmpn5P1HLs4lY6R19ng8SD/view?usp=drivesdk" target="_blank" class="block px-4 py-3 text-slate-300 hover:text-amber-400 hover:bg-gradient-to-r hover:from-amber-500/10 hover:to-yellow-500/10 transition-all duration-300">
                         <span class="flex items-center">
                             <svg class="w-4 h-4 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
@@ -404,210 +499,123 @@
         <!-- Experience Timeline -->
         <section class="py-16 px-6">
             <div class="container mx-auto">
-                <div class="max-w-4xl mx-auto">
-				
-					<!-- Ethara AI Internship -->
-                    <div class="experience-card fade-in fade-in-delay-1 mb-8">
-                        <div class="flex items-start space-x-6">
-                            <div class="achievement-icon">
-                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path>
-                                </svg>
-                            </div>
-                            <div class="flex-1">
-                                <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-                                    <div>
-                                        <h3 class="text-2xl font-bold text-white mb-2">Post-LLM Training Intern - Onsite</h3>
-                                        <p class="text-amber-400 font-semibold">Ethara AI</p>
-                                    </div>
-                                    <div class="text-slate-400 text-sm mt-2 md:mt-0">
-                                        <div>Feb 2026 - Present</div>
-										<div>Gurugram, Haryana</div>
+                <div class="max-w-4xl mx-auto relative">
+                    <!-- The Glowing Vertical Line -->
+                    <div class="absolute left-[19px] md:left-[27px] top-0 bottom-0 w-[2px] bg-gradient-to-b from-amber-500/80 via-amber-500/20 to-transparent"></div>
 
-                                    </div>
-									
+                    <!-- Post LLM-Training Intern -->
+                    <div class="relative pl-12 md:pl-20 mb-12 group reveal-on-scroll">
+                        <div class="absolute left-0 md:left-2 top-8 w-10 h-10 rounded-full bg-slate-900 border-2 border-amber-500/50 flex items-center justify-center group-hover:bg-gradient-to-br group-hover:from-amber-500 group-hover:to-yellow-500 transition-colors duration-500 z-10 shadow-[0_0_15px_rgba(245,158,11,0.2)] group-hover:shadow-[0_0_30px_rgba(245,158,11,0.6)]">
+                            <svg class="w-4 h-4 text-amber-400 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        </div>
+                        <div class="experience-card glass-card p-6 md:p-8 hover:-translate-y-2 transition-transform duration-400 border border-slate-700/50 hover:border-amber-500/50">
+                            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                                <div>
+                                    <h3 class="text-2xl font-bold text-white mb-2">Post LLM-Training Intern</h3>
+                                    <p class="text-amber-400 font-semibold flex items-center gap-2">Ethara AI <span class="text-slate-500 text-sm font-normal">| Gurugram, India</span></p>
                                 </div>
-                                
-                                <div class="space-y-4">
-                                    <p class="text-slate-300 leading-relaxed">
-                                        Gained hands-on experience in AI model evaluation and performance analytics, focusing
-										on LLM-based systems and real-world data-driven insights. Worked on multi-use-case AI 
-										evaluation projects involving structured datasets and prompt optimization.
-                                    </p>
-                                    
-                                    <div class="space-y-3">
-                                        <div class="flex items-start space-x-3">
-                                            <div class="w-2 h-2 bg-amber-400 rounded-full mt-2 flex-shrink-0"></div>
-                                            <p class="text-slate-300 text-sm">
-                                                Analyzed performance data across 3 LLM-based projects (question-solving, text-to-image generation, and prompt evaluation),
-												assessing model effectiveness across multiple use cases using structured evaluation datasets.
-                                            </p>
-                                        </div>
-                                        <div class="flex items-start space-x-3">
-                                            <div class="w-2 h-2 bg-amber-400 rounded-full mt-2 flex-shrink-0"></div>
-                                            <p class="text-slate-300 text-sm">
-                                                Processed and evaluated 300+ model responses from seen and unseen datasets, calculated accuracy metrics, and conducted detailed
-												error analysis to identify reasoning gaps, output inconsistencies, and performance trends.
-                                            </p>
-                                        </div>
-                                        <div class="flex items-start space-x-3">
-                                            <div class="w-2 h-2 bg-amber-400 rounded-full mt-2 flex-shrink-0"></div>
-                                            <p class="text-slate-300 text-sm">
-                                                Validated system performance by analyzing response quality and inference speed for 200+ JEE Advanced-level problem-solving
-												outputs, and assessed prompt-to-output alignment for generative AI models across real world test scenarios.
-                                            </p>
-                                        </div>
-                                        
+                                <div class="text-amber-500/80 font-mono text-sm mt-3 md:mt-0 px-4 py-1.5 bg-amber-500/10 rounded-full border border-amber-500/20 shadow-inner">02/2026 - Present</div>
+                            </div>
+                            <div class="space-y-4">
+                                <p class="text-slate-300 leading-relaxed font-medium">Evaluating and optimizing LLM performance across various generative AI and reasoning pipelines.</p>
+                                <div class="space-y-3">
+                                    <div class="flex items-start space-x-3">
+                                        <div class="w-1.5 h-1.5 bg-amber-400 rounded-full mt-2.5 flex-shrink-0 shadow-[0_0_8px_rgba(245,158,11,0.8)]"></div>
+                                        <p class="text-slate-300 text-sm leading-relaxed">Analyzed performance data across <strong>3 LLM-based projects</strong> (question-solving, text-to-image generation, and prompt evaluation) against curated structured datasets.</p>
                                     </div>
-                                    
-                                    <div class="mt-6">
-										<span class="tech-tag">Data Analysis</span>
-                                        <span class="tech-tag">LLM Evaluation</span>                                      
-                                        <span class="tech-tag">NLP</span>
-                                        <span class="tech-tag">Model Evaluation</span>
-                                        <span class="tech-tag">Performance Analytics</span>
+                                    <div class="flex items-start space-x-3">
+                                        <div class="w-1.5 h-1.5 bg-amber-400 rounded-full mt-2.5 flex-shrink-0 shadow-[0_0_8px_rgba(245,158,11,0.8)]"></div>
+                                        <p class="text-slate-300 text-sm leading-relaxed">Processed and evaluated <strong>300+ model responses</strong> from seen and unseen datasets, capturing reasoning gaps and output inconsistencies.</p>
                                     </div>
+                                    <div class="flex items-start space-x-3">
+                                        <div class="w-1.5 h-1.5 bg-amber-400 rounded-full mt-2.5 flex-shrink-0 shadow-[0_0_8px_rgba(245,158,11,0.8)]"></div>
+                                        <p class="text-slate-300 text-sm leading-relaxed">Validated system performance by analyzing response quality for <strong>200+ JEE Advanced-level</strong> problem-solving outputs.</p>
+                                    </div>
+                                </div>
+                                <div class="mt-6 flex flex-wrap gap-2">
+                                    <span class="tech-tag hover:border-amber-500/50 hover:text-amber-400 transition-colors cursor-default">LLM Evaluation</span>
+                                    <span class="tech-tag hover:border-amber-500/50 hover:text-amber-400 transition-colors cursor-default">Generative AI</span>
+                                    <span class="tech-tag hover:border-amber-500/50 hover:text-amber-400 transition-colors cursor-default">Prompt Engineering</span>
+                                    <span class="tech-tag hover:border-amber-500/50 hover:text-amber-400 transition-colors cursor-default">Data Analysis</span>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                     <!-- Cloud Computing Intern -->
-                    <div class="experience-card fade-in fade-in-delay-1 mb-8">
-                        <div class="flex items-start space-x-6">
-                            <div class="achievement-icon">
-                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path>
-                                </svg>
+                    <div class="relative pl-12 md:pl-20 mb-12 group reveal-on-scroll">
+                        <div class="absolute left-0 md:left-2 top-8 w-10 h-10 rounded-full bg-slate-900 border-2 border-slate-600/50 flex items-center justify-center group-hover:bg-gradient-to-br group-hover:from-amber-500 group-hover:to-yellow-500 transition-colors duration-500 z-10 shadow-[0_0_10px_rgba(0,0,0,0.5)] group-hover:shadow-[0_0_30px_rgba(245,158,11,0.6)] group-hover:border-amber-500/50">
+                            <svg class="w-4 h-4 text-slate-400 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path></svg>
+                        </div>
+                        <div class="experience-card glass-card p-6 md:p-8 hover:-translate-y-2 transition-transform duration-400 border border-slate-700/50 hover:border-amber-500/50">
+                            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                                <div>
+                                    <h3 class="text-2xl font-bold text-white mb-2">Cloud Computing Intern</h3>
+                                    <p class="text-amber-400 font-semibold gap-2">Dev Skill Hub</p>
+                                </div>
+                                <div class="text-slate-400 font-mono text-sm mt-3 md:mt-0 px-4 py-1.5 bg-slate-800/50 rounded-full border border-slate-700">06/2024 - 08/2024</div>
                             </div>
-                            <div class="flex-1">
-                                <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-                                    <div>
-                                        <h3 class="text-2xl font-bold text-white mb-2">Cloud Computing Intern</h3>
-                                        <p class="text-amber-400 font-semibold">Dev Skill Hub</p>
+                            <div class="space-y-4">
+                                <p class="text-slate-300 leading-relaxed font-medium">Gained hands-on experience with AWS cloud services, focusing on scalable infrastructure and secure data management.</p>
+                                <div class="space-y-3">
+                                    <div class="flex items-start space-x-3">
+                                        <div class="w-1.5 h-1.5 bg-slate-500 rounded-full mt-2.5 flex-shrink-0 group-hover:bg-amber-400 transition-colors"></div>
+                                        <p class="text-slate-400 group-hover:text-slate-300 transition-colors text-sm leading-relaxed">Processed and managed backend data using AWS S3 for storage and RDS for relational DBs.</p>
                                     </div>
-                                    <div class="text-slate-400 text-sm mt-2 md:mt-0">
-                                        June 2024 - August 2024
+                                    <div class="flex items-start space-x-3">
+                                        <div class="w-1.5 h-1.5 bg-slate-500 rounded-full mt-2.5 flex-shrink-0 group-hover:bg-amber-400 transition-colors"></div>
+                                        <p class="text-slate-400 group-hover:text-slate-300 transition-colors text-sm leading-relaxed">Deployed applications on EC2 instances, configuring security groups and IAM roles for least privilege access.</p>
+                                    </div>
+                                    <div class="flex items-start space-x-3">
+                                        <div class="w-1.5 h-1.5 bg-slate-500 rounded-full mt-2.5 flex-shrink-0 group-hover:bg-amber-400 transition-colors"></div>
+                                        <p class="text-slate-400 group-hover:text-slate-300 transition-colors text-sm leading-relaxed">Explored serverless architecture using AWS Lambda and encrypted sensitive data.</p>
                                     </div>
                                 </div>
-                                
-                                <div class="space-y-4">
-                                    <p class="text-slate-300 leading-relaxed">
-                                        Gained hands-on experience with AWS cloud services, focusing on scalable infrastructure 
-                                        and secure data management. Worked on real-world cloud deployment projects.
-                                    </p>
-                                    
-                                    <div class="space-y-3">
-                                        <div class="flex items-start space-x-3">
-                                            <div class="w-2 h-2 bg-amber-400 rounded-full mt-2 flex-shrink-0"></div>
-                                            <p class="text-slate-300 text-sm">
-                                                Processed and managed backend data using AWS services, including S3 for scalable 
-                                                object storage and RDS for relational database management.
-                                            </p>
-                                        </div>
-                                        <div class="flex items-start space-x-3">
-                                            <div class="w-2 h-2 bg-amber-400 rounded-full mt-2 flex-shrink-0"></div>
-                                            <p class="text-slate-300 text-sm">
-                                                Gained hands-on experience deploying and securing applications on EC2 instances, 
-                                                configuring security groups and IAM roles.
-                                            </p>
-                                        </div>
-                                        <div class="flex items-start space-x-3">
-                                            <div class="w-2 h-2 bg-amber-400 rounded-full mt-2 flex-shrink-0"></div>
-                                            <p class="text-slate-300 text-sm">
-                                                Implemented data encryption protocols to ensure secure handling of sensitive 
-                                                information in the cloud.
-                                            </p>
-                                        </div>
-                                        <div class="flex items-start space-x-3">
-                                            <div class="w-2 h-2 bg-amber-400 rounded-full mt-2 flex-shrink-0"></div>
-                                            <p class="text-slate-300 text-sm">
-                                                Explored serverless architecture by developing and deploying small functions 
-                                                using AWS Lambda.
-                                            </p>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="mt-6">
-                                        <span class="tech-tag">AWS EC2</span>
-                                        <span class="tech-tag">AWS S3</span>
-                                        
-                                        <span class="tech-tag">AWS Lambda</span>
-                                        <span class="tech-tag">Cloud Security</span>
-                                        <span class="tech-tag">Data Encryption</span>
-                                    </div>
+                                <div class="mt-6 flex flex-wrap gap-2">
+                                    <span class="tech-tag hover:border-amber-500/50 hover:text-amber-400 transition-colors cursor-default">AWS EC2 & S3</span>
+                                    <span class="tech-tag hover:border-amber-500/50 hover:text-amber-400 transition-colors cursor-default">AWS RDS</span>
+                                    <span class="tech-tag hover:border-amber-500/50 hover:text-amber-400 transition-colors cursor-default">AWS Lambda</span>
+                                    <span class="tech-tag hover:border-amber-500/50 hover:text-amber-400 transition-colors cursor-default">Cloud Security</span>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <!-- Full Stack Developer Intern -->
-                    <div class="experience-card fade-in fade-in-delay-2 mb-8">
-                        <div class="flex items-start space-x-6">
-                            <div class="achievement-icon">
-                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
-                                </svg>
+                    <div class="relative pl-12 md:pl-20 mb-12 group reveal-on-scroll">
+                        <div class="absolute left-0 md:left-2 top-8 w-10 h-10 rounded-full bg-slate-900 border-2 border-slate-600/50 flex items-center justify-center group-hover:bg-gradient-to-br group-hover:from-amber-500 group-hover:to-yellow-500 transition-colors duration-500 z-10 shadow-[0_0_10px_rgba(0,0,0,0.5)] group-hover:shadow-[0_0_30px_rgba(245,158,11,0.6)] group-hover:border-amber-500/50">
+                            <svg class="w-4 h-4 text-slate-400 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                        </div>
+                        <div class="experience-card glass-card p-6 md:p-8 hover:-translate-y-2 transition-transform duration-400 border border-slate-700/50 hover:border-amber-500/50">
+                            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                                <div>
+                                    <h3 class="text-2xl font-bold text-white mb-2">Full Stack Developer Intern</h3>
+                                    <p class="text-amber-400 font-semibold gap-2">PRUTOR IITK</p>
+                                </div>
+                                <div class="text-slate-400 font-mono text-sm mt-3 md:mt-0 px-4 py-1.5 bg-slate-800/50 rounded-full border border-slate-700">07/2023 - 09/2023</div>
                             </div>
-                            <div class="flex-1">
-                                <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-                                    <div>
-                                        <h3 class="text-2xl font-bold text-white mb-2">Full Stack Developer Intern</h3>
-                                        <p class="text-amber-400 font-semibold">PRUTOR IITK</p>
+                            <div class="space-y-4">
+                                <p class="text-slate-300 leading-relaxed font-medium">Developed a comprehensive Gym Management System from concept to deployment.</p>
+                                <div class="space-y-3">
+                                    <div class="flex items-start space-x-3">
+                                        <div class="w-1.5 h-1.5 bg-slate-500 rounded-full mt-2.5 flex-shrink-0 group-hover:bg-amber-400 transition-colors"></div>
+                                        <p class="text-slate-400 group-hover:text-slate-300 transition-colors text-sm leading-relaxed">Designed and implemented the complete backend data flow and built a user-friendly UI with fully functional CRUD operations.</p>
                                     </div>
-                                    <div class="text-slate-400 text-sm mt-2 md:mt-0">
-                                        July 2023 - September 2023
+                                    <div class="flex items-start space-x-3">
+                                        <div class="w-1.5 h-1.5 bg-slate-500 rounded-full mt-2.5 flex-shrink-0 group-hover:bg-amber-400 transition-colors"></div>
+                                        <p class="text-slate-400 group-hover:text-slate-300 transition-colors text-sm leading-relaxed">Worked with both SQL (MySQL) and NoSQL (MongoDB) databases for effective cross-platform data management.</p>
                                     </div>
                                 </div>
-                                
-                                <div class="space-y-4">
-                                    <p class="text-slate-300 leading-relaxed">
-                                        Developed a comprehensive Gym Management System from concept to deployment, 
-                                        gaining valuable experience in full-stack development and database management.
-                                    </p>
-                                    
-                                    <div class="space-y-3">
-                                        <div class="flex items-start space-x-3">
-                                            <div class="w-2 h-2 bg-amber-400 rounded-full mt-2 flex-shrink-0"></div>
-                                            <p class="text-slate-300 text-sm">
-                                                Designed and implemented the complete backend data flow for a Gym Management System.
-                                            </p>
-                                        </div>
-                                        <div class="flex items-start space-x-3">
-                                            <div class="w-2 h-2 bg-amber-400 rounded-full mt-2 flex-shrink-0"></div>
-                                            <p class="text-slate-300 text-sm">
-                                                Worked with both SQL (MySQL) and NoSQL (MongoDB) databases for effective 
-                                                and flexible data management.
-                                            </p>
-                                        </div>
-                                        <div class="flex items-start space-x-3">
-                                            <div class="w-2 h-2 bg-amber-400 rounded-full mt-2 flex-shrink-0"></div>
-                                            <p class="text-slate-300 text-sm">
-                                                Developed a user-friendly front-end interface with essential CRUD 
-                                                (Create, Read, Update, Delete) functionalities.
-                                            </p>
-                                        </div>
-                                        <div class="flex items-start space-x-3">
-                                            <div class="w-2 h-2 bg-amber-400 rounded-full mt-2 flex-shrink-0"></div>
-                                            <p class="text-slate-300 text-sm">
-                                                Collaborated in a team environment, strengthening programming fundamentals 
-                                                and agile development practices.
-                                            </p>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="mt-6">
-                                        <span class="tech-tag">MySQL</span>
-                                        <span class="tech-tag">MongoDB</span>
-                                        <span class="tech-tag">Full Stack</span>
-                                        <span class="tech-tag">CRUD Operations</span>
-                                        <span class="tech-tag">Agile Development</span>
-                                        <span class="tech-tag">Team Collaboration</span>
-                                    </div>
+                                <div class="mt-6 flex flex-wrap gap-2">
+                                    <span class="tech-tag hover:border-amber-500/50 hover:text-amber-400 transition-colors cursor-default">MySQL</span>
+                                    <span class="tech-tag hover:border-amber-500/50 hover:text-amber-400 transition-colors cursor-default">MongoDB</span>
+                                    <span class="tech-tag hover:border-amber-500/50 hover:text-amber-400 transition-colors cursor-default">Full Stack</span>
+                                    <span class="tech-tag hover:border-amber-500/50 hover:text-amber-400 transition-colors cursor-default">Agile DevOps</span>
                                 </div>
                             </div>
                         </div>
                     </div>
-					
+
                 </div>
             </div>
         </section>

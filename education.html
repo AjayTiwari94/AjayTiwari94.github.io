@@ -368,6 +368,101 @@
         .hover-scale:hover {
             transform: scale(1.02);
         }
+    
+        
+        /* Ultra Premium Interactive UI */
+        .mouse-glow {
+            position: fixed;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(245, 158, 11, 0.04) 0%, rgba(15, 23, 42, 0) 50%);
+            border-radius: 50%;
+            pointer-events: none;
+            transform: translate(-50%, -50%);
+            z-index: 0;
+            mix-blend-mode: screen;
+        }
+
+        /* Button Shimmer Effect */
+        .btn-secondary, .submit-button, .btn-primary {
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        .btn-secondary::after, .submit-button::after, .btn-primary::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -150%;
+            width: 50%;
+            height: 200%;
+            background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0) 100%);
+            transform: rotate(30deg);
+            transition: left 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+            pointer-events: none;
+            z-index: -1;
+        }
+        .btn-secondary:hover::after, .submit-button:hover::after, .btn-primary:hover::after {
+            left: 150%;
+        }
+
+        /* Responsive Navbar Glass Morph */
+        header {
+            transition: background-color 0.4s ease, border-color 0.4s ease, backdrop-filter 0.4s ease;
+        }
+        header.scrolled {
+            background: rgba(15, 23, 42, 0.95) !important;
+            border-bottom: 1px solid rgba(245, 158, 11, 0.2) !important;
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(24px);
+        }
+        header.scrolled .py-4 {
+            padding-top: 0.75rem !important;
+            padding-bottom: 0.75rem !important;
+            transition: padding 0.4s ease;
+        }
+
+        /* Premium Global UI Refinements added by AI */
+        
+        /* 1. Dynamic Scroll Reveal */
+        .reveal-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .reveal-on-scroll.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* 2. Custom Scrollbar */
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: #0f172a; }
+        ::-webkit-scrollbar-thumb { background: rgba(245, 158, 11, 0.5); border-radius: 5px; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(245, 158, 11, 0.8); }
+
+        /* 3. Subtle Background Dot Mesh */
+        .gradient-bg::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: radial-gradient(rgba(245, 158, 11, 0.07) 1px, transparent 1px);
+            background-size: 32px 32px;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* 4. Enhanced Glass Card Hover Glow */
+        .glass-card:hover, .contact-card:hover, .feature-card:hover, .stats-card:hover, .project-card:hover {
+            box-shadow: 0 0 30px rgba(245, 158, 11, 0.15), 0 20px 40px rgba(0, 0, 0, 0.4) !important;
+            border-color: rgba(245, 158, 11, 0.4) !important;
+        }
+
+        /* 5. Glowing Typography for headers */
+        h1.gradient-text, h2.gradient-text {
+            text-shadow: 0 0 25px rgba(245, 158, 11, 0.3);
+        }
+
     </style>
 </head>
 <body class="gradient-bg min-h-screen">
@@ -387,22 +482,21 @@
                 <nav class="hidden md:flex space-x-2">
                     <a href="index.html" class="nav-link">Home</a>
                     <a href="skills.html" class="nav-link">Skills</a>
-                    <a href="experience.html" class="nav-link nav-active">Experience</a>
+                    <a href="experience.html" class="nav-link">Experience</a>
                     <a href="projects.html" class="nav-link">Projects</a>
-                    <a href="education.html" class="nav-link">Education</a>
+                    <a href="education.html" class="nav-link nav-active">Education</a>
                     <a href="contact.html" class="nav-link">Contact</a>
-                    <a href="Ajay_Tiwari_Data_Analyst_Resume.pdf" target="_blank" class="nav-link">Resume</a>
-                </nav>
+                    <a href="https://drive.google.com/file/d/1yXN_zHLO33Mmpn5P1HLs4lY6R19ng8SD/view?usp=drivesdk" target="_blank" class="nav-link">Resume</a>
+            </nav>
                 
                 <button id="mobile-menu-button" class="md:hidden text-slate-300 hover:text-white transition-colors">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
-                </button>
-            </div>
+            </button>
+        </div>
             
             <div id="mobile-menu" class="hidden md:hidden mobile-menu mt-4 rounded-xl border border-slate-700/50">
-                <div class="py-2">
                     <a href="index.html" class="block px-4 py-3 text-slate-300 hover:text-amber-400 hover:bg-gradient-to-r hover:from-amber-500/10 hover:to-yellow-500/10 transition-all duration-300">
                         <span class="flex items-center">
                             <svg class="w-4 h-4 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -419,7 +513,7 @@
                             Skills
                         </span>
                     </a>
-                    <a href="experience.html" class="block px-4 py-3 text-slate-300 hover:text-amber-400 hover:bg-gradient-to-r hover:from-amber-500/10 hover:to-yellow-500/10 transition-all duration-300 nav-active">
+                    <a href="experience.html" class="block px-4 py-3 text-slate-300 hover:text-amber-400 hover:bg-gradient-to-r hover:from-amber-500/10 hover:to-yellow-500/10 transition-all duration-300">
                         <span class="flex items-center">
                             <svg class="w-4 h-4 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.605-9-1.65M8.671 15.194l.766-.766a2 2 0 01-1.023-.587l1.805-1.805a2 2 0 012.828 0l1.805 1.805a2 2 0 01-.587 1.023l-.766.766M12 15l3-9 3 9-3 9-3-9z"></path>
@@ -435,7 +529,7 @@
                             Projects
                         </span>
                     </a>
-                    <a href="education.html" class="block px-4 py-3 text-slate-300 hover:text-amber-400 hover:bg-gradient-to-r hover:from-amber-500/10 hover:to-yellow-500/10 transition-all duration-300">
+                    <a href="education.html" class="block px-4 py-3 text-slate-300 hover:text-amber-400 hover:bg-gradient-to-r hover:from-amber-500/10 hover:to-yellow-500/10 transition-all duration-300 nav-active">
                         <span class="flex items-center">
                             <svg class="w-4 h-4 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"></path>
@@ -453,7 +547,7 @@
                             Contact
                         </span>
                     </a>
-                    <a href="Ajay_Tiwari_Data_Analyst_Resume.pdf" target="_blank" class="block px-4 py-3 text-slate-300 hover:text-amber-400 hover:bg-gradient-to-r hover:from-amber-500/10 hover:to-yellow-500/10 transition-all duration-300">
+                    <a href="https://drive.google.com/file/d/1yXN_zHLO33Mmpn5P1HLs4lY6R19ng8SD/view?usp=drivesdk" target="_blank" class="block px-4 py-3 text-slate-300 hover:text-amber-400 hover:bg-gradient-to-r hover:from-amber-500/10 hover:to-yellow-500/10 transition-all duration-300">
                         <span class="flex items-center">
                             <svg class="w-4 h-4 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
