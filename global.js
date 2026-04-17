@@ -306,7 +306,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	
 }); 
 // --- Typing effect setup ---
-const roles = ["AI/ML Engineer", "Data Analyst"];
+const roles = ["Data Analyst", "Business Analyst"];
 let roleIdx = 0;
 let charIdx = 0;
 let isDeleting = false;
