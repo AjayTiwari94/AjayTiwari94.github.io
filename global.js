@@ -113,6 +113,34 @@ const projectDetails = {
 		challenges: "The primary challenge lies in balancing technological innovation with cultural authenticity and sensitivity. Ensuring accurate representation of diverse cultures while making content accessible to global audiences requires extensive research, cultural consultation, and community involvement. Additionally, the technical challenge of seamlessly integrating AR/VR technologies with traditional storytelling formats demands innovative UX design approaches.",
 		link: 'https://github.com/AjayTiwari94/Darshana'
 	},
+	'BCRT&A': {
+		title: 'Banking Customer Risk & Transaction Analysis',
+		image: 'https://placehold.co/600x400/1c1917/facc15?text=Banking+Customer+Risk+&+Transaction+Analysis',
+		problem: 'Cultural heritage and traditional stories are at risk of being lost in our digital age. There exists a gap between modern technology and cultural preservation, where younger generations lose connection with their heritage. Darshana addresses this by creating an immersive digital platform that makes cultural exploration engaging and accessible.',
+		features: [
+			'*Narad AI System:* Intelligent AI curator that personalizes cultural content recommendations based on user interests and heritage background.',
+			'*Immersive 360° Experiences:* Virtual monument visits using *360-degree photography* and *virtual reality* technology for authentic cultural immersion.',
+			'*Comprehensive Content Library:* Curated collections of traditional stories, historical monuments, folk tales, and cultural narratives from diverse regions.',
+			'*AR/VR Integration:* Advanced *Augmented Reality* and *Virtual Reality* features for interactive cultural exploration and learning.',
+			'*Multi-Modal Storytelling:* Combines text, audio, video, and interactive elements to create engaging narrative experiences.'
+		],
+		challenges: "The primary challenge lies in balancing technological innovation with cultural authenticity and sensitivity. Ensuring accurate representation of diverse cultures while making content accessible to global audiences requires extensive research, cultural consultation, and community involvement. Additionally, the technical challenge of seamlessly integrating AR/VR technologies with traditional storytelling formats demands innovative UX design approaches.",
+		link: 'https://github.com/AjayTiwari94/Darshana'
+	},
+	'CCAS': {
+		title: 'Customer Churn Analysis - Spotify',
+		image: 'https://placehold.co/600x400/1c1917/facc15?text=Customer+Churn+Analysis+-+Spotify',
+		problem: 'Cultural heritage and traditional stories are at risk of being lost in our digital age. There exists a gap between modern technology and cultural preservation, where younger generations lose connection with their heritage. Darshana addresses this by creating an immersive digital platform that makes cultural exploration engaging and accessible.',
+		features: [
+			'*Narad AI System:* Intelligent AI curator that personalizes cultural content recommendations based on user interests and heritage background.',
+			'*Immersive 360° Experiences:* Virtual monument visits using *360-degree photography* and *virtual reality* technology for authentic cultural immersion.',
+			'*Comprehensive Content Library:* Curated collections of traditional stories, historical monuments, folk tales, and cultural narratives from diverse regions.',
+			'*AR/VR Integration:* Advanced *Augmented Reality* and *Virtual Reality* features for interactive cultural exploration and learning.',
+			'*Multi-Modal Storytelling:* Combines text, audio, video, and interactive elements to create engaging narrative experiences.'
+		],
+		challenges: "The primary challenge lies in balancing technological innovation with cultural authenticity and sensitivity. Ensuring accurate representation of diverse cultures while making content accessible to global audiences requires extensive research, cultural consultation, and community involvement. Additionally, the technical challenge of seamlessly integrating AR/VR technologies with traditional storytelling formats demands innovative UX design approaches.",
+		link: 'https://github.com/AjayTiwari94/Darshana'
+	},
 	'data-analysis-mysql': {
 		title: 'Data Analysis - MySQL',
 		image: 'https://placehold.co/600x400/1c1917/facc15?text=Data+Analysis+MySQL',
