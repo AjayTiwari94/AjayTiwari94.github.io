@@ -23,7 +23,7 @@ const projectDetails = {
 		
         problem: 'The goal was to develop a high-performance, real-time object detection model capable of accurately identifying and classifying traffic signals from a live video feed. This has direct applications in autonomous driving and intelligent traffic management systems.',
         features: [
-            '*High Accuracy:* Achieved an outstanding *97% mean Average Precision (mAP)* on the test dataset.',
+            '*High Accuracy:* Achieved *72% mean Average Precision (mAP)* on the test dataset.',
             '*Real-Time Performance:* Implemented with OpenCV for efficient video capture and real-time inference.',
             '*Robust Training:* Processed and augmented over 10,000 images from the LISA dataset to handle various lighting and weather conditions.',
             '*Tech Stack:* Python, PyTorch, YOLOv8, OpenCV, Computer Vision.'
@@ -113,48 +113,48 @@ const projectDetails = {
 		challenges: "The primary challenge lies in balancing technological innovation with cultural authenticity and sensitivity. Ensuring accurate representation of diverse cultures while making content accessible to global audiences requires extensive research, cultural consultation, and community involvement. Additionally, the technical challenge of seamlessly integrating AR/VR technologies with traditional storytelling formats demands innovative UX design approaches.",
 		link: 'https://github.com/AjayTiwari94/Darshana'
 	},
-	'data-analysis-BCRT&A': {
-		title: 'Banking Customer Risk & Transaction Analysis',
-		image: 'https://placehold.co/600x400/1c1917/facc15?text=Banking+Customer+Risk+&+Transaction+Analysis',
-		problem: 'Cultural heritage and traditional stories are at risk of being lost in our digital age. There exists a gap between modern technology and cultural preservation, where younger generations lose connection with their heritage. Darshana addresses this by creating an immersive digital platform that makes cultural exploration engaging and accessible.',
-		features: [
-			'*Narad AI System:* Intelligent AI curator that personalizes cultural content recommendations based on user interests and heritage background.',
-			'*Immersive 360° Experiences:* Virtual monument visits using *360-degree photography* and *virtual reality* technology for authentic cultural immersion.',
-			'*Comprehensive Content Library:* Curated collections of traditional stories, historical monuments, folk tales, and cultural narratives from diverse regions.',
-			'*AR/VR Integration:* Advanced *Augmented Reality* and *Virtual Reality* features for interactive cultural exploration and learning.',
-			'*Multi-Modal Storytelling:* Combines text, audio, video, and interactive elements to create engaging narrative experiences.'
-		],
-		challenges: "The primary challenge lies in balancing technological innovation with cultural authenticity and sensitivity. Ensuring accurate representation of diverse cultures while making content accessible to global audiences requires extensive research, cultural consultation, and community involvement. Additionally, the technical challenge of seamlessly integrating AR/VR technologies with traditional storytelling formats demands innovative UX design approaches.",
-		link: 'https://github.com/AjayTiwari94/Darshana'
+	'banking-risk-analysis': {
+    		title: 'Banking Transaction & Customer Risk Analysis',
+    		image: 'https://placehold.co/600x400/1c1917/facc15?text=Banking+Transaction+%26+Customer+Risk+Analysis',
+    		problem: 'Financial institutions need to detect fraud and understand customer transaction behavior across millions of records. The challenge was to sample, validate, and analyze 55,554 transactions from a 6.3M-record dataset to uncover fraud patterns, customer concentration risk, and build a dashboard for business decision-making.',
+    features: [
+        		'*Fraud Pattern Detection:* Identified fraud concentrated exclusively in TRANSFER (0.94% rate) and CASH_OUT (0.33% rate) with zero fraud in PAYMENT, CASH_IN, or DEBIT transaction types.',
+        		'*Feature Engineering:* Engineered value_category feature in Python using mean transaction amount as threshold, revealing high-value transactions carry 18% greater fraud probability (0.20% vs 0.17%).',
+        		'*Customer Concentration Analysis:* Uncovered that ~18% of customers drove ~62% of total transaction value, enabling prioritization of high-risk customer segments.',
+        		'*Data Validation:* Confirmed zero nulls and zero duplicates across 55,554 records; identified 58% balance inconsistency rate through debit-credit validation.',
+        		'*Interactive Power BI Dashboard:* Built dashboard with 4 KPIs and transaction-type drill-down, visualizing $8.97bn+ in total transaction value across 5 payment categories.'
+    		],
+    		challenges: "The dataset had a 58% balance inconsistency rate across debit-credit validation. Rather than treating this as dirty data, independent assessment identified it as a structural dataset limitation. Analysis was restructured around reliable fields like transaction type and amount, ensuring findings remained valid and defensible.",
+    		link: 'https://github.com/AjayTiwari94/Banking-Customer-Risk-Transaction-Analysis'
 	},
-	'data-analysis-CCAS': {
-		title: 'Customer Churn Analysis - Spotify',
-		image: 'https://placehold.co/600x400/1c1917/facc15?text=Customer+Churn+Analysis+-+Spotify',
-		problem: 'Cultural heritage and traditional stories are at risk of being lost in our digital age. There exists a gap between modern technology and cultural preservation, where younger generations lose connection with their heritage. Darshana addresses this by creating an immersive digital platform that makes cultural exploration engaging and accessible.',
-		features: [
-			'*Narad AI System:* Intelligent AI curator that personalizes cultural content recommendations based on user interests and heritage background.',
-			'*Immersive 360° Experiences:* Virtual monument visits using *360-degree photography* and *virtual reality* technology for authentic cultural immersion.',
-			'*Comprehensive Content Library:* Curated collections of traditional stories, historical monuments, folk tales, and cultural narratives from diverse regions.',
-			'*AR/VR Integration:* Advanced *Augmented Reality* and *Virtual Reality* features for interactive cultural exploration and learning.',
-			'*Multi-Modal Storytelling:* Combines text, audio, video, and interactive elements to create engaging narrative experiences.'
-		],
-		challenges: "The primary challenge lies in balancing technological innovation with cultural authenticity and sensitivity. Ensuring accurate representation of diverse cultures while making content accessible to global audiences requires extensive research, cultural consultation, and community involvement. Additionally, the technical challenge of seamlessly integrating AR/VR technologies with traditional storytelling formats demands innovative UX design approaches.",
-		link: 'https://github.com/AjayTiwari94/Darshana'
+	'spotify-churn-analysis': {
+    		title: 'Customer Churn Analysis - Spotify',
+    		image: 'https://placehold.co/600x400/1c1917/facc15?text=Customer+Churn+Analysis+-+Spotify',
+    		problem: 'Spotify loses subscribers every month with no clear single reason. The challenge was to analyze 8,000 user records across 8 countries to identify what behavioral signals drive churn and build a risk segmentation model that maps users to targeted retention strategies.',
+    	features: [
+        	'*Churn Rate Analysis:* Identified 25.89% overall churn rate (2,071 churned users) across 8,000 users in AU, US, DE, IN, PK, FR, UK, and CA.',
+        		'*Multi-Signal Behavioral Analysis:* Individually tested 6 behavioral and demographic features; skip rate showed the largest variance (0.305 churned vs 0.298 active) but near-identical averages led to a combined multi-signal approach.',
+        		'*Rule-Based Risk Segmentation Model:* Built and refined model across 4 versions classifying users into 492 high-risk (28.46%), 2,106 medium-risk (26.54%), and 5,402 low-risk (25.40%) segments.',
+        		'*Retention Strategy Mapping:* Mapped each risk tier to a targeted action: discount offers for high-risk, engagement notifications for medium-risk, no action for low-risk.',
+        		'*Subscription & Device Analysis:* Analyzed churn rate by subscription type and device type combinations to identify highest-risk user segments.'
+    		],
+    		challenges: "No single behavioral feature clearly differentiated churned from active users. Listening time, skip rate, and songs played per day all showed near-identical averages between the two groups. This required independently reframing the problem around a combined multi-signal segmentation approach rather than relying on any one metric.",
+    		link: 'https://github.com/AjayTiwari94/Customer_Churn_Analysis-Spotify'
 	},
-	'data-analysis-mysql': {
-		title: 'Data Analysis - MySQL',
-		image: 'https://placehold.co/600x400/1c1917/facc15?text=Data+Analysis+MySQL',
-		problem: 'The objective was to analyze a large, real-world dataset (10K+ rows) using MySQL to uncover actionable business insights while ensuring high data quality through rigorous cleaning and querying optimization.',
-		features: [
-			'*Comprehensive Data Cleaning:* Performed 100% data cleaning, removed 500+ duplicates, fixed 8+ data inconsistencies, and standardized all fields for accuracy.',
-			'*Insight Generation:* Analyzed structured and unstructured data to extract 5+ key business insights.',
-			'*Advanced SQL Techniques:* Applied 6+ advanced SQL techniques (CTEs, Window Functions, Joins, Subqueries) to uncover 10+ trends and anomalies.',
-			'*Performance Optimization:* Optimized query performance by 30-40% through indexing, query refactoring, and redesigning 3 core tables for efficient execution.'
-		],
-		challenges: "Handling messy structures and executing complex queries on large datasets can be computationally expensive. I solved this by redesigning core tables, adding indexes, and refactoring queries to reduce execution time significantly.",
-		link: '#'
-	}
-    
+	'layoff-workforce-analysis': {
+    		title: 'Layoff Trends & Workforce Analysis',
+    		image: 'https://placehold.co/600x400/1c1917/facc15?text=Layoff+Trends+%26+Workforce+Analysis',
+    		problem: 'The 2022-23 post-pandemic period saw massive global layoffs with no centralized, clean dataset to analyze patterns. The challenge was to clean a heavily inconsistent 3,642-row raw dataset and extract meaningful insights about which countries, industries, and company stages were most affected.',
+    		features: [
+        		'*SQL Data Cleaning Pipeline:* Cleaned 3,642-row raw dataset to 1,995 validated records using 3 staging tables, ROW_NUMBER() for duplicate detection, and STR_TO_DATE() for type conversion.',
+        		'*Null Resolution:* Resolved 1,300+ null percentage fields and 1,253+ null layoff counts; removed rows only where both fields were simultaneously null.',
+        		'*Global Impact Analysis:* Identified US as the most impacted country with 256,559 layoffs and Post-IPO stage as the highest-risk funding stage with 204,132 layoffs.',
+        		'*Rolling Trend Analysis:* Calculated rolling monthly cumulative layoffs using window functions to track the 2022-23 peak layoff concentration over time.',
+        		'*Company-Level Rankings:* Used DENSE_RANK() to extract top 5 companies with highest layoffs per year across the full dataset.'
+    			],
+    		challenges: "45% of the raw data had to be removed due to records where both layoff count and percentage were simultaneously null, making them unusable. The cleaning process required building 3 separate staging tables to preserve the original data while iteratively resolving inconsistencies in industry names, country fields, and date formats.",
+    		link: 'https://github.com/AjayTiwari94/Layoff_Trend_And_Workforce_Analysis'
+	},
 };
 
 function openModal(projectId) {
