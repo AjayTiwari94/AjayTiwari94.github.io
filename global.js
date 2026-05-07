@@ -113,7 +113,7 @@ const projectDetails = {
 		challenges: "The primary challenge lies in balancing technological innovation with cultural authenticity and sensitivity. Ensuring accurate representation of diverse cultures while making content accessible to global audiences requires extensive research, cultural consultation, and community involvement. Additionally, the technical challenge of seamlessly integrating AR/VR technologies with traditional storytelling formats demands innovative UX design approaches.",
 		link: 'https://github.com/AjayTiwari94/Darshana'
 	},
-	'BCRT&A': {
+	'data-analysis-BCRT&A': {
 		title: 'Banking Customer Risk & Transaction Analysis',
 		image: 'https://placehold.co/600x400/1c1917/facc15?text=Banking+Customer+Risk+&+Transaction+Analysis',
 		problem: 'Cultural heritage and traditional stories are at risk of being lost in our digital age. There exists a gap between modern technology and cultural preservation, where younger generations lose connection with their heritage. Darshana addresses this by creating an immersive digital platform that makes cultural exploration engaging and accessible.',
@@ -127,7 +127,7 @@ const projectDetails = {
 		challenges: "The primary challenge lies in balancing technological innovation with cultural authenticity and sensitivity. Ensuring accurate representation of diverse cultures while making content accessible to global audiences requires extensive research, cultural consultation, and community involvement. Additionally, the technical challenge of seamlessly integrating AR/VR technologies with traditional storytelling formats demands innovative UX design approaches.",
 		link: 'https://github.com/AjayTiwari94/Darshana'
 	},
-	'CCAS': {
+	'data-analysis-CCAS': {
 		title: 'Customer Churn Analysis - Spotify',
 		image: 'https://placehold.co/600x400/1c1917/facc15?text=Customer+Churn+Analysis+-+Spotify',
 		problem: 'Cultural heritage and traditional stories are at risk of being lost in our digital age. There exists a gap between modern technology and cultural preservation, where younger generations lose connection with their heritage. Darshana addresses this by creating an immersive digital platform that makes cultural exploration engaging and accessible.',
@@ -443,5 +443,30 @@ document.addEventListener('DOMContentLoaded', () => {
                 header.classList.remove('scrolled');
             }
         });
+    }
+
+    // 3. Create Floating Data Points (Subtle Analytics Theme)
+    const dataPointsCount = 20;
+    for (let i = 0; i < dataPointsCount; i++) {
+        const dataPoint = document.createElement('div');
+        dataPoint.classList.add('data-point');
+        dataPoint.style.left = Math.random() * 100 + '%';
+        dataPoint.style.top = Math.random() * 100 + '%';
+        dataPoint.style.animationDelay = Math.random() * 15 + 's';
+        dataPoint.style.animationDuration = (12 + Math.random() * 8) + 's';
+        dataPoint.style.opacity = 0.1 + Math.random() * 0.3;
+        document.body.appendChild(dataPoint);
+    }
+
+    // 4. Create Data Flow Lines (Horizontal Movement)
+    const dataFlowLinesCount = 8;
+    for (let i = 0; i < dataFlowLinesCount; i++) {
+        const flowLine = document.createElement('div');
+        flowLine.classList.add('data-flow-line');
+        flowLine.style.top = (10 + Math.random() * 80) + '%';
+        flowLine.style.width = (100 + Math.random() * 200) + 'px';
+        flowLine.style.animationDelay = Math.random() * 8 + 's';
+        flowLine.style.animationDuration = (6 + Math.random() * 6) + 's';
+        document.body.appendChild(flowLine);
     }
 });
