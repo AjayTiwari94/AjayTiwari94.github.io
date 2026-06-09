@@ -606,7 +606,7 @@
                     <a href="projects.html" class="nav-link nav-active">Projects</a>
                     <a href="education.html" class="nav-link">Education</a>
                     <a href="contact.html" class="nav-link">Contact</a>
-                    <a href="https://drive.google.com/file/d/1s1dPUosFOg0lzeBEwkzfZ7K2OjH8KbC9/view?usp=sharing" target="_blank" class="nav-link">Resume</a>
+                    <a href="https://drive.google.com/file/d/1bJPrVJ5XEULTWo3Bm5jneF6s7Jyh6kR9/view?usp=sharing" target="_blank" class="nav-link">Resume</a>
                 </nav>
 
                 <button id="mobile-menu-button" class="md:hidden text-slate-300 hover:text-white transition-colors">
@@ -668,7 +668,7 @@
                             Contact
                         </span>
                     </a>
-                    <a href="https://drive.google.com/file/d/1s1dPUosFOg0lzeBEwkzfZ7K2OjH8KbC9/view?usp=sharing" target="_blank" class="block px-4 py-3 text-slate-300 hover:text-amber-400 hover:bg-gradient-to-r hover:from-amber-500/10 hover:to-yellow-500/10 transition-all duration-300">
+                    <a href="https://drive.google.com/file/d/1bJPrVJ5XEULTWo3Bm5jneF6s7Jyh6kR9/view?usp=sharing" target="_blank" class="block px-4 py-3 text-slate-300 hover:text-amber-400 hover:bg-gradient-to-r hover:from-amber-500/10 hover:to-yellow-500/10 transition-all duration-300">
                         <span class="flex items-center">
                             <svg class="w-4 h-4 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
@@ -693,8 +693,9 @@
 
                 <div class="fade-in fade-in-delay-2">
                     <p class="text-lg text-slate-400 max-w-3xl mx-auto leading-relaxed">
-                        A showcase of my technical expertise through real-world projects in Data Analytics, 
-                        Business Analytics, Database, ML and innovative digital platforms. Each project demonstrates analytical, problem-solving skills and practical application of modern technologies.
+                        A showcase of my technical expertise through real-world projects in AI/ML, 
+                        computer vision, medical diagnosis, and innovative digital platforms. Each project demonstrates problem-solving 
+                        skills and practical application of modern technologies.
                     </p>
                 </div>
             </div>
@@ -711,154 +712,156 @@
                 </div>
 
                 <div class="grid lg:grid-cols-2 gap-8">
+<!-- Banking Customer Risk Transaction Analysis -->
+                <div class="project-card fade-in fade-in-delay-7" data-project-id="data-analysis-BCRT&A">
+                    <div class="flex items-start space-x-6">
+                        <div class="project-icon">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"></path>
+                            </svg>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-2xl font-bold text-white mb-3 flex items-center gap-2">
+                                Banking Customer Risk & Transaction Analysis
+                                <a href="#" class="text-slate-500 hover:text-amber-400 transition-colors">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg>
+                                </a>
+                            </h3>
+                            <div class="text-slate-400 text-sm mb-4">11/2025 - 11/2025</div>
+                            <p class="text-slate-300 mb-4 leading-relaxed">
+                                Cleaned and analyzed large, noisy transaction data to identify fraud patterns using EDA and feature engineering. Built a risk scoring model and Power BI dashboard to detect high-risk transactions and support faster decision-making.
+                            </p>
 
+                            <div class="space-y-3 mb-6">
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-2 h-2 bg-amber-400 rounded-full"></div>
+                                    <span class="text-slate-300 text-sm">18% customers contributed 62% transaction value</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-2 h-2 bg-amber-400 rounded-full"></div>
+                                    <span class="text-slate-300 text-sm">Fraud limited to "transfer" and "cash_out" types</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-2 h-2 bg-amber-400 rounded-full"></div>
+                                    <span class="text-slate-300 text-sm">High-value transactions had higher fraud probability</span>
+                                </div>
+				<div class="flex items-center space-x-2">
+                                    <div class="w-2 h-2 bg-amber-400 rounded-full"></div>
+                                    <span class="text-slate-300 text-sm">"Transfer" transactions showed highest fraud rate</span>
+                                </div>
 
+                            </div>
 
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="tech-tag">MySQL</span>
+                                <span class="tech-tag">Data Analytics</span>
+				<span class="tech-tag">Business Analytics</span>
+					
+                                <span class="tech-tag">Power BI</span>
+				
+                            </div>
 
-		<!-- Banking Customer Risk Transaction Analysis -->
-                <div class="project-card fade-in fade-in-delay-8" data-project-id="banking-risk-analysis">
-    			<div class="flex items-start space-x-6">
-        			<div class="project-icon">
-            			<svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                		<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path>
-            			</svg>
-        			</div>
-        			<div class="flex-1">
-            			<h3 class="text-2xl font-bold text-white mb-3 flex items-center gap-2">
-                		Banking Transaction & Risk Analysis
-                		<a href="https://github.com/AjayTiwari94/Banking-Customer-Risk-Transaction-Analysis" class="text-slate-500 hover:text-amber-400 transition-colors">
-                    		<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg>
-                		</a>
-            			</h3>
-            			<div class="text-slate-400 text-sm mb-4">03/2026 - 03/2026</div>
-            			<p class="text-slate-300 mb-4 leading-relaxed">
-                		Sampled and analyzed 55,554 transactions from a 6.3M-record PaySim dataset using SQL, Python, and Power BI. Engineered fraud risk features, uncovered customer concentration patterns, and built an interactive dashboard visualizing $8.97bn+ in transaction value.
-            			</p>
-            			<div class="space-y-3 mb-6">
-                		<div class="flex items-center space-x-2">
-                    		<div class="w-2 h-2 bg-amber-400 rounded-full"></div>
-                    		<span class="text-slate-300 text-sm">Fraud detected exclusively in TRANSFER (0.94%) and CASH_OUT (0.33%)</span>
-                		</div>
-                		<div class="flex items-center space-x-2">
-                    		<div class="w-2 h-2 bg-amber-400 rounded-full"></div>
-                    		<span class="text-slate-300 text-sm">18% of customers drove 62% of total transaction value</span>
-                		</div>
-                		<div class="flex items-center space-x-2">
-                    		<div class="w-2 h-2 bg-amber-400 rounded-full"></div>
-                    		<span class="text-slate-300 text-sm">Interactive Power BI dashboard with 4 KPIs and transaction-type drill-down</span>
-                		</div>
-            		</div>
-            		<div class="flex flex-wrap gap-2 mb-4">
-                	<span class="tech-tag">MySQL</span>
-                	<span class="tech-tag">Python (Pandas)</span>
-                	<span class="tech-tag">Power BI</span>
-                	<span class="tech-tag">MS Excel</span>
-            	</div>
-            	<div class="text-amber-400 text-sm font-medium cursor-pointer hover:text-amber-300 transition-colors">
-                	Click to view details →
-            	</div>
-        	</div>
-    		</div>
-		</div>
-
-
-
+                            <div class="text-amber-400 text-sm font-medium cursor-pointer hover:text-amber-300 transition-colors">
+                                Click to view details →
+                            </div>
+                        </div>
+                    </div>
+                </div>
 			<!-- Customer Churn Analysis - Spotify -->
-                <div class="project-card fade-in fade-in-delay-9" data-project-id="spotify-churn-analysis">
-    <div class="flex items-start space-x-6">
-        <div class="project-icon">
-            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"></path>
-            </svg>
-        </div>
-        <div class="flex-1">
-            <h3 class="text-2xl font-bold text-white mb-3 flex items-center gap-2">
-                Spotify Customer Churn Analysis
-                <a href="https://github.com/AjayTiwari94/Customer_Churn_Analysis-Spotify" class="text-slate-500 hover:text-amber-400 transition-colors">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg>
-                </a>
-            </h3>
-            <div class="text-slate-400 text-sm mb-4">04/2026 - 04/2026</div>
-            <p class="text-slate-300 mb-4 leading-relaxed">
-                Analyzed 8,000 user records across 8 countries to identify churn drivers and build a rule-based risk segmentation model. Tested 6 behavioral features individually before reframing the problem around a combined multi-signal approach.
-            </p>
-            <div class="space-y-3 mb-6">
-                <div class="flex items-center space-x-2">
-                    <div class="w-2 h-2 bg-amber-400 rounded-full"></div>
-                    <span class="text-slate-300 text-sm">Uncovered 25.89% overall churn rate across 2,071 users</span>
-                </div>
-                <div class="flex items-center space-x-2">
-                    <div class="w-2 h-2 bg-amber-400 rounded-full"></div>
-                    <span class="text-slate-300 text-sm">Built and refined segmentation model across 4 versions: 492 high-risk, 2,106 medium-risk, 5,402 low-risk</span>
-                </div>
-                <div class="flex items-center space-x-2">
-                    <div class="w-2 h-2 bg-amber-400 rounded-full"></div>
-                    <span class="text-slate-300 text-sm">Mapped each risk tier to a targeted retention strategy for stakeholders</span>
-                </div>
-            </div>
-            <div class="flex flex-wrap gap-2 mb-4">
-                <span class="tech-tag">MySQL</span>
-                <span class="tech-tag">MS Excel</span>
-                <span class="tech-tag">Data Analysis</span>
-                <span class="tech-tag">Customer Analytics</span>
-            </div>
-            <div class="text-amber-400 text-sm font-medium cursor-pointer hover:text-amber-300 transition-colors">
-                Click to view details →
-            </div>
-        </div>
-    </div>
-</div>
+                <div class="project-card fade-in fade-in-delay-7" data-project-id="data-analysis-CCAS">
+                    <div class="flex items-start space-x-6">
+                        <div class="project-icon">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"></path>
+                            </svg>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-2xl font-bold text-white mb-3 flex items-center gap-2">
+                                Customer Churn Analysis - Spotify
+                                <a href="#" class="text-slate-500 hover:text-amber-400 transition-colors">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg>
+                                </a>
+                            </h3>
+                            <div class="text-slate-400 text-sm mb-4">11/2025 - 11/2025</div>
+                            <p class="text-slate-300 mb-4 leading-relaxed">
+                                Performed SQL-based churn analysis on Spotify user data to identify behavioral patterns and key risk factors. Built a rule-based user segmentation model and designed targeted retention strategies to reduce churn.
+                            </p>
 
+                            <div class="space-y-3 mb-6">
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-2 h-2 bg-amber-400 rounded-full"></div>
+                                    <span class="text-slate-300 text-sm">Achieved 3% churn rate separation across segments</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-2 h-2 bg-amber-400 rounded-full"></div>
+                                    <span class="text-slate-300 text-sm">Identified high-risk users with ~28% churn rate</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-2 h-2 bg-amber-400 rounded-full"></div>
+                                    <span class="text-slate-300 text-sm">Analyzed churn variation between 25%–29% ranges</span>
+                                </div>
+                            </div>
 
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="tech-tag">MySQL</span>
+                                <span class="tech-tag">Data Analytics</span>
+				<span class="tech-tag">Business Analytics</span>
+                                <span class="tech-tag">Power BI</span>
+                            </div>
 
-		    <!-- Layoff Trends & Workforce Analysis-->
-                <div class="project-card fade-in fade-in-delay-7" data-project-id="layoff-workforce-analysis">
-    <div class="flex items-start space-x-6">
-        <div class="project-icon">
-            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
-            </svg>
-        </div>
-        <div class="flex-1">
-            <h3 class="text-2xl font-bold text-white mb-3 flex items-center gap-2">
-                Layoff Trends & Workforce Analysis
-                <a href="https://github.com/AjayTiwari94/Layoff_Trend_And_Workforce_Analysis" class="text-slate-500 hover:text-amber-400 transition-colors">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg>
-                </a>
-            </h3>
-            <div class="text-slate-400 text-sm mb-4">11/2025 - 11/2025</div>
-            <p class="text-slate-300 mb-4 leading-relaxed">
-                Cleaned and standardized a 3,642-row raw dataset to 1,995 validated records using SQL staging tables, window functions, and Python. Identified global layoff patterns across industries, funding stages, and countries during the 2022-23 post-pandemic peak.
-            </p>
-            <div class="space-y-3 mb-6">
-                <div class="flex items-center space-x-2">
-                    <div class="w-2 h-2 bg-amber-400 rounded-full"></div>
-                    <span class="text-slate-300 text-sm">US most impacted country with 256,559 layoffs</span>
+                            <div class="text-amber-400 text-sm font-medium cursor-pointer hover:text-amber-300 transition-colors">
+                                Click to view details →
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="flex items-center space-x-2">
-                    <div class="w-2 h-2 bg-amber-400 rounded-full"></div>
-                    <span class="text-slate-300 text-sm">Post-IPO stage highest risk with 204,132 layoffs</span>
+		    <!-- Employee Layoff Data Analysis-->
+                <div class="project-card fade-in fade-in-delay-7" data-project-id="data-analysis-mysql">
+                    <div class="flex items-start space-x-6">
+                        <div class="project-icon">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"></path>
+                            </svg>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-2xl font-bold text-white mb-3 flex items-center gap-2">
+                                Data Analysis - MySQL
+                                <a href="#" class="text-slate-500 hover:text-amber-400 transition-colors">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg>
+                                </a>
+                            </h3>
+                            <div class="text-slate-400 text-sm mb-4">11/2025 - 11/2025</div>
+                            <p class="text-slate-300 mb-4 leading-relaxed">
+                                Analyzed a 10K+ row real-world dataset to extract business insights, performing comprehensive data cleaning, standardizing fields, and applying advanced SQL techniques like CTEs and Window Functions.
+                            </p>
+
+                            <div class="space-y-3 mb-6">
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-2 h-2 bg-amber-400 rounded-full"></div>
+                                    <span class="text-slate-300 text-sm">Extracted 5+ key business insights</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-2 h-2 bg-amber-400 rounded-full"></div>
+                                    <span class="text-slate-300 text-sm">Performed 100% data cleaning</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-2 h-2 bg-amber-400 rounded-full"></div>
+                                    <span class="text-slate-300 text-sm">Optimized query performance by 30-40%</span>
+                                </div>
+                            </div>
+
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="tech-tag">MySQL</span>
+                                <span class="tech-tag">Data Analysis</span>
+                                <span class="tech-tag">Advanced SQL</span>
+                            </div>
+
+                            <div class="text-amber-400 text-sm font-medium cursor-pointer hover:text-amber-300 transition-colors">
+                                Click to view details →
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="flex items-center space-x-2">
-                    <div class="w-2 h-2 bg-amber-400 rounded-full"></div>
-                    <span class="text-slate-300 text-sm">Resolved 1,300+ null fields using ROW_NUMBER() and staging tables</span>
-                </div>
-            </div>
-            <div class="flex flex-wrap gap-2 mb-4">
-                <span class="tech-tag">MySQL</span>
-                <span class="tech-tag">Python (Pandas)</span>
-                <span class="tech-tag">MS Excel</span>
-                <span class="tech-tag">Data Cleaning</span>
-            </div>
-            <div class="text-amber-400 text-sm font-medium cursor-pointer hover:text-amber-300 transition-colors">
-                Click to view details →
-            </div>
-        </div>
-    </div>
-</div>
-
-
-
                     <!-- Mental Health Analysis -->
                     <div class="project-card fade-in fade-in-delay-5" data-project-id="mental-health">
                         <div class="flex items-start space-x-6">
@@ -908,21 +911,7 @@
         </div>
         </section>
 
-
-
-
-
-
-
-
         <!-- AI/ML Projects -->
-
-
-
-
-
-
-
         <section class="py-16 px-6">
             <div class="container mx-auto">
                 <div class="text-center mb-12">
@@ -933,10 +922,6 @@
                 </div>
 
                 <div class="grid lg:grid-cols-2 gap-8">
-
-
-
-
                     <!-- Multi-AI-Agent-Medical-Diagnosis -->
                     <div class="project-card fade-in fade-in-delay-1" data-project-id="multi-ai-agent">
                         <div class="flex items-start space-x-6">
@@ -988,10 +973,6 @@
                         </div>
                     </div>
 
-
-
-
-
                     <!-- Traffic Signal Recognition -->
                     <div class="project-card fade-in fade-in-delay-2" data-project-id="traffic-signal">
                         <div class="flex items-start space-x-6">
@@ -1005,13 +986,13 @@
                                 <h3 class="text-2xl font-bold text-white mb-3">Real-Time Traffic Signal Recognition</h3>
                                 <p class="text-slate-300 mb-4 leading-relaxed">
                                     Built a YOLOv8 model in PyTorch to detect traffic signals in real-time, 
-                                    achieving an outstanding 72% mAP on the test dataset.
+                                    achieving an outstanding 97% mAP on the test dataset.
                                 </p>
 
                                 <div class="space-y-3 mb-6">
                                     <div class="flex items-center space-x-2">
                                         <div class="w-2 h-2 bg-amber-400 rounded-full"></div>
-                                        <span class="text-slate-300 text-sm">72% mAP accuracy on test dataset</span>
+                                        <span class="text-slate-300 text-sm">97% mAP accuracy on test dataset</span>
                                     </div>
                                     <div class="flex items-center space-x-2">
                                         <div class="w-2 h-2 bg-amber-400 rounded-full"></div>
@@ -1036,9 +1017,6 @@
                             </div>
                         </div>
                     </div>
-
-
-
 
                     <!-- Pneumonia Detection System -->
                     <div class="project-card fade-in fade-in-delay-3" data-project-id="pneumonia-detection">
@@ -1265,7 +1243,7 @@
                     </a>
                 </div>
 
-                <p class="text-slate-500 text-xs">© 2026 Ajay Tiwari. All rights reserved.</p>
+                <p class="text-slate-500 text-xs">© 2024 Ajay Tiwari. All rights reserved.</p>
             </div>
         </div>
     </footer>
