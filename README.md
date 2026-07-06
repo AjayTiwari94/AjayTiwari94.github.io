@@ -1,4 +1,4 @@
-# Ajay Tiwari — Portfolio
+# Ajay Tiwari - Portfolio
 
 Personal portfolio site for Ajay Tiwari, Data & Business Analyst.
 
@@ -10,12 +10,12 @@ B.Tech CSE (Artificial Intelligence) graduate showcasing data analytics projects
 
 ## Pages
 
-- **Home** — introduction, key stats, and skill highlights
-- **Skills** — technical stack broken down by category
-- **Experience** — internships and professional history
-- **Projects** — data analytics projects with tools, findings, and impact
-- **Education** — academic background and certifications
-- **Contact** — get in touch
+- **Home** - introduction, key stats, and skill highlights
+- **Skills** - technical stack broken down by category
+- **Experience** - internships and professional history
+- **Projects** - data analytics projects with tools, findings, and impact
+- **Education** - academic background and certifications
+- **Contact** - get in touch
 
 ## Tech Stack
 
@@ -26,7 +26,7 @@ B.Tech CSE (Artificial Intelligence) graduate showcasing data analytics projects
 
 ## Running Locally
 
-No build step required — it's static HTML/CSS/JS.
+No build step required - it's static HTML/CSS/JS.
 
 ```bash
 git clone https://github.com/AjayTiwari94/<repo-name>.git
