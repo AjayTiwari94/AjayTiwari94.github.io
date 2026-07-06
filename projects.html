@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects - Ajay Tiwari - Data & Business Analyst</title>
+    <meta name="description" content="Data analytics projects by Ajay Tiwari covering banking fraud detection, customer churn segmentation, and workforce layoff trends using SQL, Python, and Power BI.">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23f59e0b%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23fbbf24%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%2224%22%20height%3D%2224%22%20rx%3D%226%22%20fill%3D%22url%28%23g%29%22/%3E%3Cpath%20d%3D%22M9%2019v-6a2%202%200%2000-2-2H5a2%202%200%2000-2%202v6a2%202%200%20002%202h2a2%202%200%20002-2zm0%200V9a2%202%200%20012-2h2a2%202%200%20012%202v10m-6%200a2%202%200%20002%202h2a2%202%200%20002-2m0%200V5a2%202%200%20012-2h2a2%202%200%20012%202v14a2%202%200%2001-2%202h-2a2%202%200%2001-2-2z%22%20fill%3D%22none%22%20stroke%3D%22white%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22/%3E%3C/svg%3E">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -343,12 +345,14 @@
         /* Ultra Premium Interactive UI */
         .mouse-glow {
             position: fixed;
+            top: 0;
+            left: 0;
             width: 600px;
             height: 600px;
             background: radial-gradient(circle, rgba(245, 158, 11, 0.04) 0%, rgba(15, 23, 42, 0) 50%);
             border-radius: 50%;
             pointer-events: none;
-            transform: translate(-50%, -50%);
+            will-change: transform;
             z-index: 0;
             mix-blend-mode: screen;
         }
@@ -593,7 +597,7 @@
                 <a href="index.html" class="flex items-center space-x-3 group">
                     <div class="w-10 h-10 bg-gradient-to-br from-amber-500 to-yellow-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                         <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
                         </svg>
                     </div>
                     <span class="text-2xl font-bold name-animate">Ajay Tiwari</span>
@@ -606,7 +610,7 @@
                     <a href="projects.html" class="nav-link nav-active">Projects</a>
                     <a href="education.html" class="nav-link">Education</a>
                     <a href="contact.html" class="nav-link">Contact</a>
-                    <a href="https://drive.google.com/file/d/1bJPrVJ5XEULTWo3Bm5jneF6s7Jyh6kR9/view?usp=sharing" target="_blank" class="nav-link">Resume</a>
+                    <a href="https://drive.google.com/file/d/1d_rcDM8P1AWyWvvnP6J7iq_OMRUnD00h/view?usp=drive_link" target="_blank" class="nav-link">Resume</a>
                 </nav>
 
                 <button id="mobile-menu-button" class="md:hidden text-slate-300 hover:text-white transition-colors">
@@ -668,7 +672,7 @@
                             Contact
                         </span>
                     </a>
-                    <a href="https://drive.google.com/file/d/1bJPrVJ5XEULTWo3Bm5jneF6s7Jyh6kR9/view?usp=sharing" target="_blank" class="block px-4 py-3 text-slate-300 hover:text-amber-400 hover:bg-gradient-to-r hover:from-amber-500/10 hover:to-yellow-500/10 transition-all duration-300">
+                    <a href="https://drive.google.com/file/d/1d_rcDM8P1AWyWvvnP6J7iq_OMRUnD00h/view?usp=drive_link" target="_blank" class="block px-4 py-3 text-slate-300 hover:text-amber-400 hover:bg-gradient-to-r hover:from-amber-500/10 hover:to-yellow-500/10 transition-all duration-300">
                         <span class="flex items-center">
                             <svg class="w-4 h-4 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
@@ -693,7 +697,9 @@
 
                 <div class="fade-in fade-in-delay-2">
                     <p class="text-lg text-slate-400 max-w-3xl mx-auto leading-relaxed">
-                        A showcase of Real-world projects in data analytics, SQL, and Python - from payment fraud detection and customer churn modeling to workforce trend analysis.
+                        A showcase of my technical expertise through real-world projects in data analytics, 
+                        business intelligence, and database management. Each project demonstrates problem-solving 
+                        skills and practical application of analytics tools.
                     </p>
                 </div>
             </div>
@@ -721,38 +727,42 @@
                         <div class="flex-1">
                             <h3 class="text-2xl font-bold text-white mb-3 flex items-center gap-2">
                                 Banking Customer Risk & Transaction Analysis
-                                <a href="#" class="text-slate-500 hover:text-amber-400 transition-colors">
+                                <a href="https://github.com/AjayTiwari94/Banking-Customer-Risk-Transaction-Analysis" target="_blank" class="text-slate-500 hover:text-amber-400 transition-colors">
                                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg>
                                 </a>
                             </h3>
-                            <div class="text-slate-400 text-sm mb-4">March 2026</div>
+                            <div class="text-slate-400 text-sm mb-4">03/2026</div>
                             <p class="text-slate-300 mb-4 leading-relaxed">
-                                Cleaned and analyzed large, noisy transaction data to identify fraud patterns using EDA and feature engineering. Built a risk scoring model and Power BI dashboard to detect high-risk transactions and support faster decision-making.
+                                Segmented 55,554 transactions ($8.97bn total value) sampled from a 6.3M-record PaySim dataset to identify fraud patterns and prioritize risk monitoring, using SQL, Python, and Power BI.
                             </p>
 
                             <div class="space-y-3 mb-6">
                                 <div class="flex items-center space-x-2">
                                     <div class="w-2 h-2 bg-amber-400 rounded-full"></div>
-                                    <span class="text-slate-300 text-sm">18% of customers drove 62% of $8.97bn transaction value</span>
+                                    <span class="text-slate-300 text-sm">Identified that 18% of customers drove 62% of $8.97bn in transaction value, enabling a prioritized risk monitoring strategy, by segmenting 55,554 transactions across 5 payment categories in SQL and Python.</span>
                                 </div>
                                 <div class="flex items-center space-x-2">
                                     <div class="w-2 h-2 bg-amber-400 rounded-full"></div>
-                                    <span class="text-slate-300 text-sm">Fraud in TRANSFER (0.94%) and CASH_OUT (0.33%); zero in other 3 types</span>
+                                    <span class="text-slate-300 text-sm">Confirmed 0 duplicates and 0 nulls across all 11 columns, ensuring analysis-ready data integrity, by running systematic data quality checks in both SQL and Python before any aggregation.</span>
                                 </div>
                                 <div class="flex items-center space-x-2">
                                     <div class="w-2 h-2 bg-amber-400 rounded-full"></div>
-                                    <span class="text-slate-300 text-sm">High-value transactions had 18% higher fraud probability (0.20% vs 0.17%)</span>
+                                    <span class="text-slate-300 text-sm">Revealed 18% higher fraud probability in high-value transactions (0.20% vs 0.17%), enabling targeted risk flagging, by engineering a value_category feature using Pandas with mean transaction amount as threshold.</span>
                                 </div>
-				
+				<div class="flex items-center space-x-2">
+                                    <div class="w-2 h-2 bg-amber-400 rounded-full"></div>
+                                    <span class="text-slate-300 text-sm">Surfaced fraud exclusively in TRANSFER (0.94%) and CASH_OUT (0.33%), eliminating 3 categories from fraud scope, by building an interactive Power BI dashboard with 4 KPIs and a transaction-type slicer.</span>
+                                </div>
 
                             </div>
 
                             <div class="flex flex-wrap gap-2 mb-4">
                                 <span class="tech-tag">MySQL</span>
-				<span class="tech-tag">Python (Pandas)</span>
-				<span class="tech-tag">Excel</span>
-				<span class="tech-tag">Power BI</span>
-                                <span class="tech-tag">Data & Business Analytics</span>		
+                                <span class="tech-tag">Data Analytics</span>
+				<span class="tech-tag">Business Analytics</span>
+					
+                                <span class="tech-tag">Power BI</span>
+				
                             </div>
 
                             <div class="text-amber-400 text-sm font-medium cursor-pointer hover:text-amber-300 transition-colors">
@@ -772,35 +782,35 @@
                         <div class="flex-1">
                             <h3 class="text-2xl font-bold text-white mb-3 flex items-center gap-2">
                                 Customer Churn Analysis - Spotify
-                                <a href="#" class="text-slate-500 hover:text-amber-400 transition-colors">
+                                <a href="https://github.com/AjayTiwari94/Customer_Churn_Analysis-Spotify" target="_blank" class="text-slate-500 hover:text-amber-400 transition-colors">
                                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg>
                                 </a>
                             </h3>
-                            <div class="text-slate-400 text-sm mb-4">April 2026</div>
+                            <div class="text-slate-400 text-sm mb-4">04/2026</div>
                             <p class="text-slate-300 mb-4 leading-relaxed">
-                                Performed SQL-based churn analysis on Spotify user data to identify behavioral patterns and key risk factors. Built a rule-based user segmentation model and designed targeted retention strategies to reduce churn.
+                                Segmented 8,000 Spotify users (25.89% churn) into actionable risk tiers with mapped retention strategies, using a rule-based SQL segmentation model built in MySQL.
                             </p>
 
                             <div class="space-y-3 mb-6">
                                 <div class="flex items-center space-x-2">
                                     <div class="w-2 h-2 bg-amber-400 rounded-full"></div>
-                                    <span class="text-slate-300 text-sm">High Risk: 492 users (28.46%), Medium: 2,106 (26.54%), Low: 5,402 (25.40%)</span>
+                                    <span class="text-slate-300 text-sm">Separated 8,000 users (25.89% churn) into 3 actionable risk tiers with mapped retention strategies, where single-metric approaches failed to differentiate groups, by building a rule-based SQL segmentation model across 4 iterations.</span>
                                 </div>
                                 <div class="flex items-center space-x-2">
                                     <div class="w-2 h-2 bg-amber-400 rounded-full"></div>
-                                    <span class="text-slate-300 text-sm">Identified high-risk users with 28.46% churn rate</span>
+                                    <span class="text-slate-300 text-sm">Mapped High Risk (492, 28.46%), Medium Risk (2,106, 26.54%), Low Risk (5,402, 25.40%) to targeted discounts, engagement notifications, and no-action tiers respectively, by applying multi-condition SQL segmentation logic.</span>
                                 </div>
                                 <div class="flex items-center space-x-2">
                                     <div class="w-2 h-2 bg-amber-400 rounded-full"></div>
-                                    <span class="text-slate-300 text-sm">Analyzed Student + Mobile highest churn at 29.92%</span>
+                                    <span class="text-slate-300 text-sm">Pinpointed Student + Mobile as the highest-churn segment at 29.92% and skip rate as the strongest behavioral signal (0.3049 vs 0.2985), by running subscription x device cross-analysis and behavioral metric comparisons in MySQL.</span>
                                 </div>
                             </div>
 
                             <div class="flex flex-wrap gap-2 mb-4">
                                 <span class="tech-tag">MySQL</span>
-				<span class="tech-tag">Python (Pandas)</span>
-				<span class="tech-tag">Excel</span>
-                                <span class="tech-tag">Data & Business Analytics</span>
+                                <span class="tech-tag">Data Analytics</span>
+				<span class="tech-tag">Business Analytics</span>
+                                <span class="tech-tag">Power BI</span>
                             </div>
 
                             <div class="text-amber-400 text-sm font-medium cursor-pointer hover:text-amber-300 transition-colors">
@@ -819,32 +829,31 @@
                         </div>
                         <div class="flex-1">
                             <h3 class="text-2xl font-bold text-white mb-3 flex items-center gap-2">
-                                Layoff Trends & Workforce Analysis
-                                <a href="#" class="text-slate-500 hover:text-amber-400 transition-colors">
+                                Layoff Trends and Workforce Analysis
+                                <a href="https://github.com/AjayTiwari94/Layoff_Trend_And_Workforce_Analysis" target="_blank" class="text-slate-500 hover:text-amber-400 transition-colors">
                                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg>
                                 </a>
                             </h3>
-                            <div class="text-slate-400 text-sm mb-4">Nov 2025</div>
+                            <div class="text-slate-400 text-sm mb-4">11/2025</div>
                             <p class="text-slate-300 mb-4 leading-relaxed">
-                                Analyzed 3,642 raw real-world dataset to extract business insights, performing comprehensive data cleaning, standardizing fields, and applying advanced SQL techniques like CTEs and Window Functions.
+                                Reduced 3,642 raw layoff records to 1,995 analysis-ready entries and surfaced year-over-year and company-level trends using MySQL and Python.
                             </p>
 
                             <div class="space-y-3 mb-6">
                                 <div class="flex items-center space-x-2">
                                     <div class="w-2 h-2 bg-amber-400 rounded-full"></div>
-                                    <span class="text-slate-300 text-sm">US: 256,559 layoffs; Post-IPO stage: 204,132; peak year 2022 at 160,661</span>
+                                    <span class="text-slate-300 text-sm">Reduced 3,642 raw records to 1,995 analysis-ready entries, enabling reliable trend reporting, by designing deduplication and standardization logic across 3 MySQL staging tables.</span>
                                 </div>
                                 <div class="flex items-center space-x-2">
                                     <div class="w-2 h-2 bg-amber-400 rounded-full"></div>
-                                    <span class="text-slate-300 text-sm">Removed 1,647 records (45%) with missing layoff count and percentage</span>
+                                    <span class="text-slate-300 text-sm">Surfaced US (256,559 layoffs) and Post-IPO (204,132) as the highest-impact segments, and identified 2022 peak at 160,661 with Q1 2023 adding 125,000+, by running year-over-year and company-level aggregation queries in MySQL and Python.</span>
                                 </div>
-                                
+                            </div>
 
                             <div class="flex flex-wrap gap-2 mb-4">
                                 <span class="tech-tag">MySQL</span>
-				<span class="tech-tag">Python (Pandas)</span>
-                                <span class="tech-tag">Data Analysis</span>
-                                <span class="tech-tag">Advanced SQL</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Excel</span>
                             </div>
 
                             <div class="text-amber-400 text-sm font-medium cursor-pointer hover:text-amber-300 transition-colors">
@@ -853,14 +862,13 @@
                         </div>
                     </div>
                 </div>
-                    
-
                 
             </div>
         </div>
         </section>
 
-        <!-- AI/ML Projects -->
+        <!--
+
         <section class="py-16 px-6">
             <div class="container mx-auto">
                 <div class="text-center mb-12">
@@ -871,7 +879,7 @@
                 </div>
 
                 <div class="grid lg:grid-cols-2 gap-8">
-                    <!-- Multi-AI-Agent-Medical-Diagnosis -->
+                    
                     <div class="project-card fade-in fade-in-delay-1" data-project-id="multi-ai-agent">
                         <div class="flex items-start space-x-6">
                             <div class="project-icon">
@@ -922,52 +930,7 @@
                         </div>
                     </div>
 
-                    <!-- Traffic Signal Recognition -->
-                    <div class="project-card fade-in fade-in-delay-2" data-project-id="traffic-signal">
-                        <div class="flex items-start space-x-6">
-                            <div class="project-icon">
-                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
-                                </svg>
-                            </div>
-                            <div class="flex-1">
-                                <h3 class="text-2xl font-bold text-white mb-3">Real-Time Traffic Signal Recognition</h3>
-                                <p class="text-slate-300 mb-4 leading-relaxed">
-                                    Built a YOLOv8 model in PyTorch to detect traffic signals in real-time, 
-                                    achieving an outstanding 97% mAP on the test dataset.
-                                </p>
-
-                                <div class="space-y-3 mb-6">
-                                    <div class="flex items-center space-x-2">
-                                        <div class="w-2 h-2 bg-amber-400 rounded-full"></div>
-                                        <span class="text-slate-300 text-sm">97% mAP accuracy on test dataset</span>
-                                    </div>
-                                    <div class="flex items-center space-x-2">
-                                        <div class="w-2 h-2 bg-amber-400 rounded-full"></div>
-                                        <span class="text-slate-300 text-sm">Real-time processing with OpenCV</span>
-                                    </div>
-                                    <div class="flex items-center space-x-2">
-                                        <div class="w-2 h-2 bg-amber-400 rounded-full"></div>
-                                        <span class="text-slate-300 text-sm">Comprehensive data augmentation pipeline</span>
-                                    </div>
-                                </div>
-
-                                <div class="flex flex-wrap gap-2 mb-4">
-                                    <span class="tech-tag">PyTorch</span>
-                                    <span class="tech-tag">YOLOv8</span>
-                                    <span class="tech-tag">OpenCV</span>
-                                    <span class="tech-tag">Computer Vision</span>
-                                </div>
-
-                                <div class="text-amber-400 text-sm font-medium cursor-pointer hover:text-amber-300 transition-colors">
-                                    Click to view details →
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Pneumonia Detection System -->
+                    
                     <div class="project-card fade-in fade-in-delay-3" data-project-id="pneumonia-detection">
                         <div class="flex items-start space-x-6">
                             <div class="project-icon">
@@ -1017,7 +980,7 @@
                         </div>
                     </div>
 
-                    <!-- Instagram Sentiment Analysis -->
+                    
                     <div class="project-card fade-in fade-in-delay-4" data-project-id="instagram-sentiment">
                         <div class="flex items-start space-x-6">
                             <div class="project-icon">
@@ -1060,59 +1023,12 @@
                             </div>
                         </div>
                     </div>
-		    
-		    <!-- Mental Health Analysis -->
-                    <div class="project-card fade-in fade-in-delay-5" data-project-id="mental-health">
-                        <div class="flex items-start space-x-6">
-                            <div class="project-icon">
-                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
-                                </svg>
-                            </div>
-                            <div class="flex-1">
-                                <h3 class="text-2xl font-bold text-white mb-3 flex items-center gap-2">
-				Mental Health Predictive Analysis
-				<a href="#" class="text-slate-500 hover:text-amber-400 transition-colors">
-                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg>
-                                </a>
-                            </h3>
-                            <div class="text-slate-400 text-sm mb-4">Oct 2025</div>
-                                <p class="text-slate-300 mb-4 leading-relaxed">
-                                    Built a logistic regression model (71% accuracy) to predict if a tech employee 
-                                    would seek mental health treatment. Visualized insights with Power BI.
-                                </p>
-
-                                <div class="space-y-3 mb-6">
-                                    <div class="flex items-center space-x-2">
-                                        <div class="w-2 h-2 bg-amber-400 rounded-full"></div>
-                                        <span class="text-slate-300 text-sm">71% prediction accuracy</span>
-                                    </div>
-                                    <div class="flex items-center space-x-2">
-                                        <div class="w-2 h-2 bg-amber-400 rounded-full"></div>
-                                        <span class="text-slate-300 text-sm">Interactive Power BI dashboard</span>
-                                    </div>
-                                    <div class="flex items-center space-x-2">
-                                        <div class="w-2 h-2 bg-amber-400 rounded-full"></div>
-                                        <span class="text-slate-300 text-sm">Identified key predictive factors</span>
-                                    </div>
-                                </div>
-
-                                <div class="flex flex-wrap gap-2 mb-4">
-                                    <span class="tech-tag">Scikit-learn</span>
-                                    <span class="tech-tag">Power BI</span>
-                                    <span class="tech-tag">Logistic Regression</span>
-                                    <span class="tech-tag">Data Visualization</span>
-                                </div>
-
-                                <div class="text-amber-400 text-sm font-medium cursor-pointer hover:text-amber-300 transition-colors">
-                                    Click to view details →
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
+-->
+
+        
 
         <!-- Innovative Platforms -->
         <section class="py-16 px-6">
@@ -1147,6 +1063,14 @@
                                     My innovative startup concept: A comprehensive digital platform that connects users to their cultural 
                                     heritage through immersive storytelling, featuring AI-powered content curation, virtual reality experiences, 
                                     and interactive cultural exploration.
+                                </p>
+                                <p class="text-slate-300 mb-4 leading-relaxed">
+                                    Recognized as the <span class="text-amber-400 font-semibold">1st place startup concept among 80-100 teams</span> 
+                                    at NIT Trichy's Start Up Arena, qualifying for the national finale.
+                                </p>
+                                <p class="text-slate-300 mb-4 leading-relaxed">
+                                    Invited to the <span class="text-amber-400 font-semibold">Startup Clinic mentoring session at IIT Delhi</span>, 
+                                    organized by eDC (Entrepreneurship Development Cell), to present the idea to an industry expert who gave positive feedback and guidance on refining the pitch.
                                 </p>
 
                                 <div class="grid md:grid-cols-2 gap-4 mb-6">

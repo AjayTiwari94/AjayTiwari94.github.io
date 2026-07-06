@@ -427,8 +427,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Easing interpolation for smooth follow
         glowX += (mouseX - glowX) * 0.1;
         glowY += (mouseY - glowY) * 0.1;
-        cursorGlow.style.left = glowX + 'px';
-        cursorGlow.style.top = glowY + 'px';
+        cursorGlow.style.transform = `translate3d(${glowX - 300}px, ${glowY - 300}px, 0)`;
         requestAnimationFrame(animateGlow);
     }
     animateGlow();
@@ -446,7 +445,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // 3. Create Floating Data Points (Subtle Analytics Theme)
-    const dataPointsCount = 20;
+    const dataPointsCount = 8;
     for (let i = 0; i < dataPointsCount; i++) {
         const dataPoint = document.createElement('div');
         dataPoint.classList.add('data-point');
@@ -459,7 +458,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // 4. Create Data Flow Lines (Horizontal Movement)
-    const dataFlowLinesCount = 8;
+    const dataFlowLinesCount = 4;
     for (let i = 0; i < dataFlowLinesCount; i++) {
         const flowLine = document.createElement('div');
         flowLine.classList.add('data-flow-line');
